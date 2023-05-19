@@ -1,0 +1,199 @@
+﻿@page "/sportsafternoon"
+
+@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+@inject CalendarService calendarService
+
+<PageTitle>Sports Afternoon - Doddington Carnival</PageTitle>
+
+<title>Sports Afternoon?</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="container">
+
+        <header>
+            <h4 class="line-divider">Sports Afternoon</h4>
+            <h1>Sports Afternoon</h1>
+        </header>
+
+        <div class="container col-xxl-8 px-4 py-5">
+
+            <div class="control-container">
+                <SfCarousel>
+                    <CarouselItem>
+                        <figure class="img-container">
+                            <img src="images/pages/SportsAfternoon/2017/19621291_1482250578503166_1300248151366618181_o.jpg" alt="Children's Races" style="height:100%;width:100%;" />
+                            <figcaption class="img-caption">Children's Races</figcaption>
+                        </figure>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <figure class="img-container">
+                            <img src="images/pages/SportsAfternoon/2017/19667644_1482251121836445_5926384276269129387_o.jpg" alt="Children's Races" style="height:100%;width:100%;" />
+                            <figcaption class="img-caption">Children's Races</figcaption>
+                        </figure>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <figure class="img-container">
+                            <img src="images/pages/SportsAfternoon/20220702_140025-min.jpg" alt="Ice-Creams" style="height:100%;width:100%;" />
+                            <figcaption class="img-caption">Ice-Creams</figcaption>
+                        </figure>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <figure class="img-container">
+                            <img src="images/pages/SportsAfternoon/20220702_140533-min.jpg" alt="Stalls" style="height:100%;width:100%;" />
+                            <figcaption class="img-caption">Stalls</figcaption>
+                        </figure>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <figure class="img-container">
+                            <img src="images/pages/SportsAfternoon/20220702_142055-min.jpg" alt="Stalls" style="height:100%;width:100%;" />
+                            <figcaption class="img-caption">Stalls</figcaption>
+                        </figure>
+                    </CarouselItem>
+                </SfCarousel>
+            </div>
+
+
+            <div class="card eventCard">
+                <div class="card-body">
+                    <p class="eventHeading">Event Details</p>
+
+                    <p>Children of all ages are invited to come and join in the fun, with a range of races available to suit all abilities and interests. </p>
+                    <p>From running and jumping to crawling and balancing, our sports races offer a great opportunity for kids to get active and showcase their skills in a friendly and supportive environment. </p>
+                    <p>With prizes for all participants, as well as a chance to win the coveted trophy for each age category, our sports races are sure to be a highlight of the carnival proceedings.</p>
+                    <p>Whilst you're with us, enjoy some local stalls, mixed with tea and cakes and bouncy castles for good measure.</p>
+                    <p>So why not bring the whole family along and enjoy a day of fun, games, and healthy competition?</p>
+
+                    <SharedNextEvent Tag="Sports Afternoon" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="card eventCard">
+                        <div class="card-header">
+                            Official Schedule
+                        </div>
+                        <div class="card-body">
+                            <p class="eventHeading">Saturday 1st July 2023</p>
+                            <p>Saturday 1st July 2023</p>
+                            <p>07:00 - Gates open to the stall holders (for set-up only).</p>
+                            <p>13:30 - Gates open to the public.</p>
+                            <p>14:30 - Children's Races commence.</p>
+                            <p>18:00 - Expected end of day.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card eventCard">
+                        <div class="card-header">
+                            Download Stall Form
+                        </div>
+                        <div class="card-body">
+                            <p>Download the Stall Form (PDF) file to register your interest for running a stall.</p>
+                            <a href="/pdfs/stalls/2023 field stall form.pdf" target="_blank" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Download now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+            <img src="images/Pages/SportsAfternoon/Races.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Race Events</h1>
+            <p class="lead">Races for children ages 4 to 14, in various distance events.</p>
+            <p class="lead">Medals and trophies are on offer, so get your running shoes on!</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="/sportsafternoon/races" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to the Races!</a>
+            </div>
+            </div>
+            </div>
+
+            <hr />
+
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+
+            <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Food</h1>
+            <p class="lead">Getting hungry out in the sun? Worn out from the race events?</p>
+            <p class="lead">Head on over to see what we've got cooking for you!</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="/sportsafternoon/food" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to Food Info</a>
+            </div>
+            </div>
+
+            <div class="col-10 col-sm-8 col-lg-6">
+            <img src="images/Pages/SportsAfternoon/Races.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+            </div>
+            </div>*@
+
+            @*         <hr />
+
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+            <img src="images/Pages/SportsAfternoon/Titles/Stalls.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Stalls</h1>
+            <p class="lead">There's a variety of local stall holders for you to browse around.</p>
+            <p class="lead">From clothes and competitions to tasty delights.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="sportsafternoon/stalls" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to Stalls</a>
+            </div>
+            </div>
+            </div>*@
+
+
+            @* <hr />
+
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+
+            <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Kids Entertainment</h1>
+            <p class="lead">Bouncy castles and other fun stuff to wear your kids out for the day!</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="/sportsafternoon/entertainment" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to the Entertainment</a>
+            </div>
+            </div>
+
+            <div class="col-10 col-sm-8 col-lg-6">
+            <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+            </div>
+            </div>
+
+            <hr />
+
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+            <img src="images/Pages/SportsAfternoon/Races.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Sports Results</h1>
+            <p class="lead">There's a variety of local stall holders for you to browse around.</p>
+            <p class="lead">From clothes and competitions to tasty delights.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="results" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to Results</a>
+            </div>
+            </div>
+            </div>*@
+
+        </div>
+    </div>
+</div>
+
+@code {
+
+    DateTime? NextSportsDay;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var sportsDay = calendarService.GetNext("Sports Afternoon");
+
+        if (sportsDay != null)
+        {
+            NextSportsDay = sportsDay.Start;
+        }
+    }
+}

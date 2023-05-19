@@ -1,0 +1,221 @@
+﻿@page "/carnival"
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Navigations
+
+<PageTitle>Carnival - Doddington Carnival</PageTitle>
+
+<title>Carnival</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="container">
+
+        <header>
+            <h4 class="line-divider">Carnival</h4>
+            <h1>Doddington Carnival</h1>
+        </header>
+
+        <div class="container col-xxl-8 px-4 py-5">
+
+            <div class="control-container">
+                <SfCarousel>
+                    <CarouselItem>
+                        <figure class="img-container">
+                            <img src="images/pages/Carnival/Floats/Carnival2017 (13).jpg" alt="Carnival Floats" style="height:100%;width:100%;" />
+                            <figcaption class="img-caption">Carnival Floats</figcaption>
+                        </figure>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <figure class="img-container">
+                            <img src="images/pages/Carnival//Floats/Carnival2018 (41).jpg" alt="Live music from Bondy" style="height:100%;width:100%;" />
+                            <figcaption class="img-caption">Live music from Bondy</figcaption>
+                        </figure>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <figure class="img-container">
+                            <img src="images/pages/Carnival/Floats/Carnival2017 (6).jpg" alt="Carnival Floats" style="height:100%;width:100%;" />
+                            <figcaption class="img-caption">Carnival Floats</figcaption>
+                        </figure>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <figure class="img-container">
+                            <img src="images/pages/Carnival//Floats/Carnival2018 (19).jpg" alt="Carnival Floats" style="height:100%;width:100%;" />
+                            <figcaption class="img-caption">Carnival Floats</figcaption>
+                        </figure>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <figure class="img-container">
+                            <img src="images/pages/Carnival//Floats/Carnival2019 (26).jpg" alt="Carnival Floats" style="height:100%;width:100%;" />
+                            <figcaption class="img-caption">Carnival Floats</figcaption>
+                        </figure>
+                    </CarouselItem>
+                    <CarouselItem>
+                        <figure class="img-container">
+                            <img src="images/pages/Carnival//Floats/Carnival2019 (12).jpg" alt="Carnival Prince & Princess (2019)" style="height:100%;width:100%;" />
+                            <figcaption class="img-caption">Carnival Prince & Princess (2019)</figcaption>
+                        </figure>
+                    </CarouselItem>
+                </SfCarousel>
+            </div>
+
+
+            <div class="card eventCard">
+                <div class="card-body">
+                    <p class="eventHeading">Event Details</p>
+
+                    <p>Doddington Village Carnival is on the morning of the first Saturday in July each year, and the parade reaches throughout the village. Come out and see the fantastic array of floats, bands and vehicles on display, each to tie-in to this year's theme and show-off the creativeness of the village.</p>
+
+                    <SharedNextEvent Tag="Carnival Parade" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="card eventCard">
+                        <div class="card-header">
+                            Official Schedule
+                        </div>
+                        <div class="card-body">
+
+                            <p class="eventHeading">Saturday 1st July 2023</p>
+                            <p>09:00 - <a href="/carnival/roadclosure">Road closure</a> through the village.</p>
+                            <p>09:30 - Fancy Dress Competition.</p>
+                            <p>10:30 - The start of the Carnival Parade.</p>
+                            <p>12:00 - Anticipated end of the Carnival Parade.</p>
+                            <p>12:30 - Road re-opens.</p>
+                            <p>13:30 - Gates open to The Children's <a href="/sportsafternoon">Sports Afternoon</a>.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card eventCard">
+                        <div class="card-header">
+                            Get Involved!
+                        </div>
+                        <div class="card-body">
+
+                            <p class="eventHeading">Have a Float in the Parade</p>
+                            <p>Big floats and little floats are welcome!</p>
+                            <p>Drop us a quick email to saythat you're interested in a float, and we'll get in touch with how you get started and where to get the stuff from!</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card eventCard">
+                <div class="card-header">
+                    Carnival Parade
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Float away in the parade procession through the village!</p>
+                            <p>Bands, group floats, family floats and marching bands - there's something for everyone.</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <a href="/carnival/parade" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to the Parade</a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <img src="images/Pages/Carnival/Titles/Float.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card eventCard">
+                <div class="card-header">
+                    Fancy Dress
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Get creative and get making a fancy dress as part of our competition!</p>
+                            <p>See what you can make that fits into this year's theme to become the winner in your group.</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <a href="/carnival/fancydress" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to Fancy Dress</a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <img src="images/Pages/Carnival/Titles/FancyDress.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card eventCard">
+                <div class="card-header">
+                    Road Closure
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>
+                                To create a safe environment during the Carnival procession, a road closure is enforced. Residents of Doddington should be aware.
+                            </p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <a href="/carnival/roadclosure" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to the Road Closure info</a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <img src="images/Pages/Carnival/Titles/RoadClosed.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            @*<hr />
+
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-lg-12">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Focal Points</h1>
+            <p class="lead text-bold">Saturday 1st July 2023</p>
+            <p class="lead">BBQ @@ The George, Doddington.</p>
+            <p class="lead">BBQ @@ The Three Tuns, Doddington.</p>
+            </div>
+            </div>*@
+
+
+            @*<hr />
+
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+            <img src="images/Pages/Carnival/FloatJudges.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Floats Competition</h1>
+            <p class="lead">Our judges will decide the winner and award prizes to the best floats in the parade. </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="/carnival/floats" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to Floats</a>
+            </div>
+            </div>
+            </div>
+
+            <hr />
+
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+
+            <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Carnival Results</h1>
+            <p class="lead">Get creative and get making a fancy dress as part of our competition!</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="/results" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to Results</a>
+            </div>
+            </div>
+
+            <div class="col-10 col-sm-8 col-lg-6">
+            <img src="" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+            </div>
+            </div>*@
+        </div>
+    </div>
+</div>
+
+@code {
+
+}

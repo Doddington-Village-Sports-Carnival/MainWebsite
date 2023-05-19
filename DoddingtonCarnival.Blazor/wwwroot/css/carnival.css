@@ -1,0 +1,922 @@
+﻿:root {
+    --doddington-blue: #0F66A5;
+    --doddington-orange: #E3AF1A;
+    --doddington-yellow: #EEE114;
+    --doddington-nav: RGBA(33,37,41,var(--bs-bg-opacity,1));
+}
+
+@font-face {
+    font-family: 'Roboto', serif !important;
+    /*font-weight: normal;
+    font-style: normal;
+    text-rendering: optimizeLegibility;*/
+}
+
+.top-row {
+    background-color: var(--doddington-nav) !important;
+}
+
+.sidebar {
+    background-image: none !important;
+    background-color: var(--doddington-nav);
+}
+
+.nav-item a.active {
+    background-color: var(--doddington-blue) !important;
+    color: white;
+}
+
+html, body {
+    font-family: 'Roboto', serif;
+}
+
+.indented {
+    margin-left: 20px;
+}
+
+.diaryItems li {
+    background-color: #3B579D;
+    margin-bottom: 50px;
+}
+
+.nav-item[b-a2p1rcey5h] {
+    padding-bottom: 0.2rem;
+}
+
+    .nav-item[b-a2p1rcey5h] a {
+        height: 2.2rem;
+    }
+
+.content {
+}
+
+.carnivalBodyPage {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+
+/*
+*   Divider for Heading lines
+*/
+
+.line-divider:after {
+    background: url("/images/divider/divider.png") no-repeat bottom center;
+    padding-bottom: 25px;
+    display: block;
+    height: 10px;
+    content: ",";
+    text-indent: -9999px;
+    width: 630px;
+    text-align: center;
+    margin: auto auto 24px;
+}
+
+.line-divider-inline:after {
+    background: url("/images/divider/divider_more_text.png") no-repeat bottom center;
+    padding-bottom: 0px;
+    display: block;
+    height: 10px;
+    content: ",";
+    text-indent: -9999px;
+    width: 100%;
+    text-align: center;
+    margin: auto auto 24px;
+    margin-top: -22px;
+}
+
+/* PAGE COLOURS */
+
+.carnivalpage {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    /*background: url(../images/pages/twitter/tw_bck.jpg) 50% 0 no-repeat fixed;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+}
+
+    .carnivalpage .container header {
+    }
+
+        .carnivalpage .container header h1 {
+            font-size: 4em;
+            color: white;
+        }
+
+        .carnivalpage .container header h4 {
+            font-size: 1.5em;
+            color: #aaaaaa;
+            text-transform: uppercase;
+        }
+
+.carnivalpage-darkblue {
+    background-color: #0F66A5;
+}
+
+.carnivalpage-orange-accent {
+    color: orange;
+}
+
+.carnivalpage-yellow-accent {
+    color: yellow;
+}
+
+.carnivalpage-red {
+    background-color: #D62129;
+}
+
+.page-features {
+}
+
+    .page-features .features .feature {
+        display: inline-block;
+        margin-right: 10px;
+        color: black;
+    }
+
+
+.overlay:after {
+    background: none !important;
+}
+
+.pages header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+
+
+.trophy {
+    /*height: 450px;*/
+    height: 250px;
+}
+
+.trophy-xs {
+    text-align: left;
+}
+
+.trophytitle {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.trophysubtitle {
+    text-transform: uppercase;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.categoryName {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header {
+    font-size: small;
+}
+
+.header-xs {
+    font-size: x-small;
+}
+
+.name2 {
+    font-style: italic;
+    font-size: small;
+}
+
+
+.page-media {
+    position: relative;
+    /*background: url(../images/pages/twitter/tw_bck.jpg) 50% 0 no-repeat fixed;*/
+    background-color: #3B579D;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+}
+
+/*
+*   PAGE | TWITTER
+*/
+.page-twitter {
+    position: relative;
+    /*background: url(../images/pages/twitter/tw_bck.jpg) 50% 0 no-repeat fixed;*/
+    background-color: #3B579D;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.page-santarun {
+    position: relative;
+    background-image: url('../Content/images/santarun/snowflakes.gif');
+    /*background: url(../images/pages/santarun/santarun_bck_2016.jpg) 50% 0 no-repeat fixed;*/
+    background-color: #990000;
+    -webkit-background-size: cover -moz-background-size: cover -o-background-size: cover background-size: cover;
+}
+
+#santa-tabs > ul > li {
+    color: #990000;
+    font-size: medium;
+}
+
+    #santa-tabs > ul > li > a {
+        color: #990000;
+    }
+
+    #santa-tabs > ul > li.active > a {
+        background-color: #990000;
+        color: white;
+        font-weight: bold;
+    }
+
+.tab-pane > div > div {
+    /*background-color: yellow;*/
+}
+
+    .tab-pane > div > div > p {
+        font-weight: bold;
+    }
+
+.page-pubquiz {
+    /*position: relative;*/
+    background-color: white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.page-1980sDisco {
+    /*position: relative;*/
+    background-color: #aaaaaa;
+    color: white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+    .page-1980sDisco h4 {
+        color: white;
+    }
+
+.page-shoppingevening {
+    /*position: relative;*/
+    background-color: #FFFEF4;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+
+.page-theme {
+    /*position: relative;*/
+    background-color: #EF7967;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+    .page-theme .line-divider {
+        color: white;
+    }
+
+.page-news {
+    /*position: relative;*/
+    background-color: #5786CB;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.page-1940sDay {
+    /*position: relative;*/
+    background-color: burlywood;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+    .page-1940sDay .line-divider {
+        color: black;
+    }
+
+    .page-1940sDay .calendar {
+        text-align: center;
+    }
+
+        .page-1940sDay .calendar h4 {
+            color: black;
+        }
+
+
+.page-volunteer {
+    /*position: relative;*/
+    background-color: forestgreen;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+    .page-volunteer h1, .page-volunteer h4, .page-volunteer h5 {
+        color: white;
+    }
+
+    .page-volunteer p {
+        color: white;
+    }
+
+.page-scarecrow {
+    /*position: relative;*/
+    background-color: #4F7AD8;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+    .page-scarecrow h1, .page-scarecrow h4, .page-scarecrow h5 {
+        color: white;
+    }
+
+    .page-scarecrow p {
+        color: white;
+    }
+
+    .page-scarecrow .themeTitle {
+        color: white;
+    }
+
+.page-results {
+    /*position: relative;*/
+    background-color: white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+    .page-results h1, .page-results h4, .page-results h5 {
+        color: black;
+    }
+
+    .page-results p {
+        color: black;
+    }
+
+.page-theblog {
+    /*position: relative;*/
+    background-color: #FF5C73;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+    .page-theblog h1, .page-theblog h4, .page-theblog h5 {
+        color: white;
+    }
+
+        .page-theblog h5 a {
+            text-transform: lowercase;
+            color: white;
+        }
+
+    .page-theblog p {
+        color: white;
+    }
+
+.page-lostandfound {
+    /*position: relative;*/
+    background-color: dodgerblue;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+    .page-lostandfound h1, .page-lostandfound h4, .page-lostandfound h5 {
+        color: white;
+    }
+
+        .page-lostandfound h5 a {
+            text-transform: lowercase;
+            color: black;
+        }
+
+    .page-lostandfound p {
+        color: black;
+    }
+
+
+.page-adverts {
+    /*position: relative;*/
+    background-color: #289C39;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+    .page-adverts h1, .page-adverts h4, .page-adverts h5 {
+        color: white;
+    }
+
+        .page-adverts h5 a {
+            text-transform: lowercase;
+            color: white;
+        }
+
+    .page-adverts p {
+        color: white;
+    }
+
+.page-roadclosure {
+    /*position: relative;*/
+    background-color: #731a12;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+    .page-roadclosure h1, .page-roadclosure h4, .page-roadclosure h5 {
+        color: white;
+    }
+
+        .page-roadclosure h5 a {
+            text-transform: lowercase;
+            color: white;
+        }
+
+    .page-roadclosure p {
+        color: white;
+    }
+
+.page-prsmusic {
+    /*position: relative;*/
+    background-color: white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+    .page-prsmusic h1, .page-prsmusic h4, .page-prsmusic h5 {
+        color: black;
+    }
+
+    .page-prsmusic p {
+        color: black;
+    }
+
+.facebookAlbumList {
+    padding-top: 5px;
+    padding-bottom: 25px;
+}
+
+.paragraphVertSpacer {
+    padding-bottom: 10px;
+}
+
+
+/* Carnival colours */
+.carnivalRed {
+    color: #E42C1A;
+}
+
+.carnivalBlue {
+    color: #103993;
+}
+
+.carnivalWhite {
+    color: #F7F7F7;
+}
+
+.carnivalBlack {
+    color: black;
+}
+
+.carnivalEventDone {
+    color: #aaaaaa;
+}
+
+.page-welcome {
+    /*position: relative;*/
+    background-color: #FFFFFF !important;
+    color: #0F66A5 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.page-newsletter {
+    /*position: relative;*/
+    background-color: #0F66A5 !important;
+    color: #FFFFFF !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.page-testimonials, .sponsorshipopportunities, .page-tshirts, .page-donations, .page-annualgeneralmeeting, .page-stallholders .page-privacypolicy {
+    /*position: relative;*/
+    background-color: #0F66A5;
+    color: white !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.page-instagram, .page-recruitment {
+    /*position: relative;*/
+    background-color: #EBDE16;
+    color: #0F66A5 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.page-posters {
+    /*position: relative;*/
+    background-color: #E3AF1A;
+    color: white !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.section-tshirt {
+    /*position: relative;*/
+    background-color: white !important;
+    color: #0F66A5 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+
+
+.donateMoney .donateButtons,
+#donateAmount,
+.donateMoney h4 {
+    text-align: center;
+}
+
+#donateSpinner p {
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.download-button .btn-success {
+    background-color: #0F66A5;
+}
+
+
+
+.carnivalYellowText {
+    color: #EBDE16;
+}
+
+.carnivalBlueText {
+    color: #0F66A5;
+}
+
+.carnivalOrangeText {
+    color: #E3AF1A;
+}
+
+.carnivalYellowBackground {
+    background-color: #EBDE16;
+}
+
+.carnivalBlueBackground {
+    background-color: #0F66A5;
+}
+
+.carnivalOrangeBackground {
+    background-color: #E3AF1A;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+.raceDetails {
+}
+
+    .raceDetails p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .raceDetails .raceName {
+        font-weight: bold;
+    }
+
+    .raceDetails .raceSponsor {
+        font-style: italic;
+    }
+
+
+.weblink {
+    color: #e3af1a;
+}
+
+.text-centre {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-bold {
+    font-weight: bold
+}
+
+
+.col-center {
+    margin: 0 auto;
+}
+
+
+.posters {
+}
+
+    .posters .poster-entry {
+        /*border: 1px solid black;*/
+        padding: 10px;
+        text-align: center;
+    }
+
+        .posters .poster-entry p {
+            text-align: center;
+            font-weight: bold;
+        }
+
+
+        .posters .poster-entry img {
+            max-height: 250px;
+        }
+
+
+/* Portrait tablets and small desktops */
+@media (max-width: 991px) {
+    .posters .poster-entry img {
+        width: 100vw;
+        max-height: none;
+    }
+}
+
+
+/* TESTIMONIALS */
+
+.testimonials {
+}
+
+.page-testimonials .testimonial {
+    background-color: white;
+    display: block;
+    float: left;
+    width: 31%;
+    height: 160px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: black;
+}
+
+    .page-testimonials .testimonial p {
+        font-size: small;
+        margin: 0;
+        padding-left: 10px;
+    }
+
+    .page-testimonials .testimonial .name {
+        font-weight: bold;
+    }
+
+    .page-testimonials .testimonial .date {
+        margin-top: -10px;
+    }
+
+    .page-testimonials .testimonial .comment {
+        line-height: 18px;
+        font-size: medium;
+        font-weight: bold;
+    }
+
+
+/* Portrait tablets and small desktops */
+@media (max-width: 991px) {
+    .page-testimonials .testimonial {
+        width: 100%;
+        height: auto;
+    }
+
+        .page-testimonials .testimonial .date {
+            margin-top: -5px;
+        }
+}
+
+.santaDays {
+    margin-top: 15px;
+}
+
+    .santaDays .santaDay .day {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .santaDays .santaDay .start {
+        font-weight: normal;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .santaDays .santaDay ul {
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+
+        .santaDays .santaDay ul li {
+            font-weight: normal;
+            font-size: 0.65em;
+        }
+
+.santaRun {
+}
+
+    .santaRun iframe {
+        display: block;
+        background: #000;
+        border: none;
+        height: 100%;
+        width: 100%;
+    }
+
+.santaRunFestiveCheer {
+    background-image: url(/images/pages/santarun/festivecheer.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.btn-primary {
+    color: var(--doddington-blue);
+    background-color: var(--doddington-orange);
+    border-color: var(--doddington-blue);
+    font-weight: bold;
+}
+
+    .btn-primary:hover {
+        color: var(--doddington-blue);
+        background-color: var(--doddington-yellow);
+        border-color: var(--doddington-orange);
+    }
+
+    .btn-check:focus + .btn-primary, .btn-primary:focus {
+        color: #fff;
+        background-color: var(--doddington-yellow);
+        border-color: hotpink;
+        box-shadow: 0 0 0 .25rem rgba(49,132,253,.5)
+    }
+
+    .btn-check:active + .btn-primary, .btn-check:checked + .btn-primary, .btn-primary.active, .btn-primary:active, .show > .btn-primary.dropdown-toggle {
+        color: var(--doddington-blue);
+        background-color: var(--doddington-yellow);
+        border-color: darkgreen
+    }
+
+        .btn-check:active + .btn-primary:focus, .btn-check:checked + .btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show > .btn-primary.dropdown-toggle:focus {
+            box-shadow: 0 0 0 .25rem rgba(49,132,253,.5)
+        }
+
+    .btn-primary.disabled, .btn-primary:disabled {
+        color: #fff;
+        background-color: #0d6efd;
+        border-color: #0d6efd
+    }
+
+
+.headerTitle {
+    font-size: 1.2rem !important;
+    margin-top: 0;
+}
+
+
+
+
+.bannerImage {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 50vh;
+}
+
+    .bannerImage.scarecrowBanner {
+        background-image: url(/images/pages/Scarecrows/banner.jpg);
+    }
+
+    .bannerImage.santaBanner {
+        background-image: url(/images/pages/SantaRun/banner.jpg);
+    }
+
+    .bannerImage.sportsafternoonBanner {
+        background-image: url(/images/pages/SportsAfternoon/banner.jpg);
+    }
+
+    .bannerImage.carnivalBanner {
+        background-image: url(/images/pages/Carnival/banner.jpg);
+    }
+
+
+/* SyncFusion */
+.control-container {
+    background-color: #e5e5e5;
+    /*height: 300px;*/
+    margin: 0 auto;
+    /*width: 500px;*/
+    width: 100%;
+    width: 100%;
+}
+
+.e-carousel .e-carousel-items .e-carousel-item .img-container {
+    height: 100%;
+}
+
+.e-carousel .e-carousel-items .e-carousel-item .img-caption {
+    bottom: 4em;
+    color: #fff;
+    font-size: 12pt;
+    height: 2em;
+    position: relative;
+    padding: 0.3em 1em;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+
+.eventCard.card {
+    color: black;
+    margin-top: 25px;
+}
+
+    .eventCard.card .card-header {
+        color: white;
+        background-color: dimgray;
+        border: 0;
+    }
+
+    .eventCard.card .card-body {
+        padding: 25px;
+    }
+
+    .eventCard.card .eventHeading {
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    .eventCard.card .eventDescription {
+        text-align: justify;
+    }

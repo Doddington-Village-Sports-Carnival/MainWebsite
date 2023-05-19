@@ -1,0 +1,24 @@
+﻿@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+
+@inject CalendarService calendarService
+
+@if (nextEvent != null)
+{
+    <p>The next @nextEvent.Title is on the @nextEvent.Start.ToLongDateString()!</p>
+}
+
+@code {
+    CalendarEntry? nextEvent;
+
+    [Parameter]
+    public string? Tag { get; set; }
+
+    [Parameter]
+    public string[]? Tags { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        nextEvent = calendarService.GetNext(this.Tag);
+    }
+}

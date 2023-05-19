@@ -1,0 +1,56 @@
+﻿@page "/scarecrows/create"
+
+@inject NavigationManager NavManager
+
+<PageTitle>Create a Scarecrows - Doddington Carnival</PageTitle>
+
+<title>Doddington Scarecrow Competition</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="overlay"></div>
+    <div class="container">
+        <header>
+            <h4 class="line-divider" @onclick="NavigateToParent">Scarecrows</h4>
+            <h1>How to Build a Scarecrow!</h1>
+
+        </header>
+
+        <div class="row">
+
+            <h1>Step 1</h1>
+
+            <h4>Have an idea of what you want to build</h4>
+
+            <p>Have a look at previous examples, and get a sense of what you'd like to create and how you're going to do it.</p>
+
+        </div>
+
+        <div class="row">
+
+            <h1>Step 2</h1>
+
+            <h4>Get the stuff</h4>
+
+            <p>Straw is the best stuffing for a scarecrow and if you need help getting some, drop us a line.</p>
+
+        </div>
+
+        <div class="row">
+
+            <h1>Step 3</h1>
+
+            <h4>Be creative but have fun!</h4>
+
+            <p>Children of all ages can participate and we want everyone to enjoy building these amazing creations.</p>
+
+        </div>
+
+    </div>
+</div>
+
+@code {
+    private void NavigateToParent()
+    {
+        NavManager.NavigateTo("/scarecrows");
+    }
+}

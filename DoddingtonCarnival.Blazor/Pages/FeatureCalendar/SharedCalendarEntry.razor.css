@@ -1,0 +1,56 @@
+﻿.calendarEvent {
+    margin: 20px 10px 20px 10px;
+    border-bottom: 1px solid white;
+}
+
+    .calendarEvent .dateDetails {
+        text-align: center;
+    }
+
+        .calendarEvent .dateDetails .month {
+        }
+
+        .calendarEvent .dateDetails .day {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .calendarEvent .dateDetails .year {
+        }
+
+    .calendarEvent .locationDetails {
+    }
+
+        .calendarEvent .locationDetails .time {
+            font-size: 0.75em;
+        }
+
+        .calendarEvent .locationDetails .title {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .calendarEvent .locationDetails .location {
+            font-weight: bold;
+        }
+
+        .calendarEvent .locationDetails .details {
+            margin-top: 5px;
+        }
+
+            .calendarEvent .locationDetails .details p {
+                padding: 0 !important;
+            }
+
+
+    .calendarEvent .goButton {
+        margin-top: 10px;
+    }
+
+    .calendarEvent.past {
+        color: gray;
+    }
+
+    .calendarEvent.hidden {
+        display: none;
+    }

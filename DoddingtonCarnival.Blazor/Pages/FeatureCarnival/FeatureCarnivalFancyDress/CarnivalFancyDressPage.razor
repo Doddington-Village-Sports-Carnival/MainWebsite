@@ -1,0 +1,43 @@
+﻿@page "/carnival/fancydress"
+
+@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+
+@inject FancyDressService fancydressService
+@inject NavigationManager NavManager
+
+<PageTitle>CARNIVAL PARADE</PageTitle>
+
+<title>Carnival Parade?</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="container">
+
+        <header>
+            <h4 class="line-divider" @onclick="NavigateToParent">Carnival</h4>
+            <h1>Fancy Dress Competition</h1>
+        </header>
+
+        <div class="px-4 py-5 my-5 text-center">
+            <div class="col-lg-12 mx-auto">
+
+                <SharedNextEvent Tag="Fancy Dress, Carnival" />
+
+            </div>
+        </div>
+
+        <SharedMasonryImages baseService=fancydressService />
+
+    </div>
+</div>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+    }
+
+    private void NavigateToParent()
+    {
+        NavManager.NavigateTo("/carnival");
+    }
+}

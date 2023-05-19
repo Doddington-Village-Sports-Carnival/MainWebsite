@@ -1,0 +1,32 @@
+﻿@using DoddingtonCarnival.Blazor.Interfaces;
+@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+
+<div class="row">
+    <div class="col">
+
+        @if (this.imagesList != null && imagesList.Any())
+        {
+            <div class="masonry">
+                @foreach (var image in imagesList.OrderByDescending(x => x.Year))
+                {
+                    <div class="mItem">
+                        <img src="@image.Location">
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public IBaseService? baseService { get; set; }
+
+    IEnumerable<CarnivalImage>? imagesList = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        this.imagesList = baseService.GetAll();
+    }
+}

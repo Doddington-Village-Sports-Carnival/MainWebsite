@@ -1,0 +1,789 @@
+﻿@page "/history"
+
+<PageTitle>History - Doddington Carnival</PageTitle>
+
+<title>Where it all began</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="overlay"></div>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h4 class="line-divider">History</h4>
+            <h1>Where it all began</h1>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <p>The Carnival is made up of numerous colourful floats from the groups and organisations and each year the procession is led each by a different band or group.</p>
+                    <p>But it hasn't always been like that.</p>
+                </div>
+            </div>
+        </header>
+        <!-- End Header -->
+
+        <div class="row" style="margin-bottom: 10px;">
+            <div class="col-md-12 center">
+                <button class="btn btn-primary" id="buttonTimelineHistory">Hide history</button>
+                <button class="btn btn-primary" id="buttonTimelineProgrames">Show programmes</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1" id="section-timeline">
+
+
+                @{
+                     
+                    var blobStorage = "https://doddingtoncarnival.blob.core.windows.net";
+                }
+                <link rel="stylesheet" type="text/css" media="all" href="~/css//timeline.css">
+
+                <title>History of Doddington Village Sports and Carnival</title>
+
+                <ul class="timeline">
+                    <li><div class="tldate">1922</div></li>
+
+                    <li class="timeline-inverted timelineHistory">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>Whist Club start Sports Day</h4>
+                                <p><small class="text-muted">July 1922</small></p>
+                            </div>
+                            <div class="tl-body">
+                                <p>Lionel Sedley, the then headmaster of the Village School, joined the Doddington Whist Club. He suggested that the club organise a treat for the local school children in the form of a Sports Day.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineHistory">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>Inaugural Sports Day</h4>
+                                <p><small class="text-muted">5th August 1922</small></p>
+                            </div>
+                            <div class="tl-body">
+                                <p>
+                                    The first ever Sports Day took place, with 35 Races and cash prizes for the winners (1s for first place).
+                                </p>
+                                <p>
+                                    Races included all the normal running races and also such things as a Potato Race and, for the girls, a Needle Threading Race.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><div class="tldate">1937</div></li>
+
+                    <li class="timeline-inverted timelineHistory">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>British Legion steps in</h4>
+                                <p>
+                                    <small class="text-muted">July 1937</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>In 1937, the Whist Club disbanded and gave their surplus funds to the British Legion on the condition that they continue to organise the Sports Day event.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><div class="tldate">1966</div></li>
+
+                    <li class="timelineHistory">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>Doddington United FC race on</h4>
+                                <p>
+                                    <small class="text-muted">July 1966</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>Doddington United FC took over the running of the Sports Day event.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/1973%20Doddington%20Children's%20Sports.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">1973 Doddington Children's Sports</p>
+                                        <p><a href="~/pdfs/1973.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/1974%20Doddington%20Children's%20Sports.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">1974 Doddington Children's Sports</p>
+                                        <p><a href="~/pdfs/1974.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/1980%20Doddington%20Children's%20Sports.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">1980 Doddington Children's Sports</p>
+                                        <p><a href="~/pdfs/1980.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><div class="tldate">1981</div></li>
+
+                    <li class="timelineHistory">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>A Dedicated committee</h4>
+                                <p>
+                                    <small class="text-muted">1981</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>A dedicated committee was created with the sole job of running the Sports Day event.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/1981%20Doddington%20Children's%20Sports.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">1981 Doddington Children's Sports</p>
+                                        <p><a href="~/pdfs/1981.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel ">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/1982%20Doddington%20Children's%20Sports.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">1982 Doddington Children's Sports</p>
+                                        <p><a href="~/pdfs/1982.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/1983%20Doddington%20Children's%20Sports.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">1983 Doddington Children's Sports</p>
+                                        <p><a href="~/pdfs/1983.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/1984%20Doddington%20Children's%20Sports.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">1984 Doddington Children's Sports</p>
+                                        <p><a href="~/pdfs/1984.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><div class="tldate">1986</div></li>
+
+                    <li class="timeline-inverted timelineHistory">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>The Carnival is born</h4>
+                                <p>
+                                    <small class="text-muted"><i class="glyphicon glyphicon-time"></i> July 1986</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>The first Carnival was started and sets an annual tradition in place.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/1986%20Doddington%20Children's%20Sports%20and%20Carnival.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">1986 Doddington Children's Sports and Carnival</p>
+                                        <p><a href="~/pdfs/1986.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/1995%20Doddington%20Carnival%20and%20Sports.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">1995 Doddington Carnival and Sports</p>
+                                        <p><a href="~/pdfs/1995.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/1998%20Doddington%20Carnival%20and%20Sports.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">1998 Doddington Carnival and Sports</p>
+                                        <p><a href="~/pdfs/1998.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/1999%20Doddington%20Carnival%20and%20Sports%20Day.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">1999 Doddington Carnival and Sports Day</p>
+                                        <p><a href="~/pdfs/1999.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2000%20Doddington%20Carnival%20and%20Sports%20Day.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2000 Doddington Carnival and Sports Day</p>
+                                        <p><a href="~/pdfs/2000.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2001%20Doddington%20Carnival%20and%20Sports%20Day.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2001 Doddington Carnival and Sports Day</p>
+                                        <p><a href="~/pdfs/2001.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2002%20Doddington%20Carnival%20and%20Sports%20Day.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2002 Doddington Carnival and Sports Day</p>
+                                        <p><a href="~/pdfs/2002.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2003%20Doddington%20Carnival%20and%20Sports%20Day.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2003 Doddington Carnival and Sports Day</p>
+                                        <p><a href="~/pdfs/2003.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2004%20Doddington%20Carnival%20and%20Sports%20Day.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2004 Doddington Carnival and Sports Day</p>
+                                        <p><a href="~/pdfs/2004.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2005%20Doddington%20Carnival%20and%20Sports%20Day.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2005 Doddington Carnival and Sports Day</p>
+                                        <p><a href="~/pdfs/2005.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2006%20Doddington%20Carnival%20and%20Sports%20Day.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2006 Doddington Carnival and Sports Day</p>
+                                        <p><a href="~/pdfs/2006.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2007%20Doddington%20Carnival%20and%20Sports%20Day.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2007 Doddington Carnival and Sports Day</p>
+                                        <p><a href="~/pdfs/2007.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2008%20Doddington%20Carnival%20and%20Sports%20Day.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2008 Doddington Carnival and Sports Day</p>
+                                        <p><a href="~/pdfs/2008.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2009%20Doddington%20Carnival%20and%20Sports%20Day.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2009 Doddington Carnival and Sports Day</p>
+                                        <p><a href="~/pdfs/2009.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2010%20Doddington%20Carnival%20and%20Sports.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2010 Doddington Carnival and Sports</p>
+                                        <p><a href="~/pdfs/2010.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="tldate">2011</div>
+                    </li>
+
+                    <li class="timelineHistory">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>Carnival's 25th Anniversary</h4>
+                                @*<p><small class="text-muted">July 2011</small>
+                                </p>*@
+                            </div>
+                            <div class="tl-body">
+                                @*<p>Here you'll find some beautiful photography for your viewing pleasure, courtesy of <a href="http://lorempixel.com/">lorempixel</a>.</p>
+
+                                <p><img src="http://lorempixel.com/600/300/nightlife/" alt="lorem pixel"></p>*@
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2011%20Doddington%20Carnival%20and%20Sports.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2011 Doddington Carnival and Sports</p>
+                                        <p><a href="~/pdfs/2011.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="tldate">2012</div>
+                    </li>
+
+                    <li class="timelineHistory">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>Sports Day's 90th Anniversary</h4>
+                                @*<p>
+                                <small class="text-muted">July 2012</small>
+                                </p>*@
+                            </div>
+                            <div class="tl-body">
+                                @*<p>Here you'll find some beautiful photography for your viewing pleasure, courtesy of <a href="http://lorempixel.com/">lorempixel</a>.</p>
+
+                                <p><img src="http://lorempixel.com/600/300/nightlife/" alt="lorem pixel"></p>*@
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2012%20Doddington%20Carnival%20and%20Sports.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2012 Doddington Carnival and Sports</p>
+                                        <p><a href="~/pdfs/2012.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2013%20Doddington%20Carnival%20and%20Sports.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2013 Doddington Carnival and Sports</p>
+                                        <p><a href="~/pdfs/2013.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2014%20Doddington%20Carnival%20and%20Sports.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2014 Doddington Carnival and Sports</p>
+                                        <p><a href="~/pdfs/2014.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><div class="tldate">2015</div></li>
+
+                    <li class="timeline-inverted timelineHistory">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>New Carnival Team</h4>
+                                <p>
+                                    <small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2015</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>The former committee passed the baton onto an entirely new and enthusiastic team of locals, for them to write the next chapter in the history of the Carnival.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2015%20Doddington%20Village%20Sports%20and%20Carnival.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2015 Doddington Village Sports and Carnival</p>
+                                        <p><a href="~/pdfs/2015.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2016%20Doddington%20Carnival%20and%20Sports.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2016 Doddington Carnival and Sports</p>
+                                        <p><a href="~/pdfs/2016.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2017%20Doddington%20Village%20Sports%20and%20Carnival.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2017 Doddington Village Sports and Carnival</p>
+                                        <p><a href="~/pdfs/2017.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timelineProgramme">
+                        <div class="timeline-panel">
+                            <div class="tl-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="display: block" src="@((blobStorage))/images/2017%20Doddington%20Village%20Sports%20and%20Carnival.jpg" width="100" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p style="display: block">2018 Doddington Village Sports and Carnival</p>
+                                        <p><a href="~/pdfs/2018.pdf" target="_blank">View the programme</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><div class="tldate">2020</div></li>
+
+                    <li class="timelineHistory">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>Cancelled: CoronaVirus</h4>
+                                <p>
+                                    <small class="text-muted">2020</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>The 2020 Carnival and Sports Day were cancelled due to the Covid-19 pandemic.</p>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="timeline-inverted timelineHistory">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>Santa made it through!</h4>
+                                <p>
+                                    <small class="text-muted"><i class="glyphicon glyphicon-time"></i> Santa Run 2020</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>Despite the global pandemic, Santa made it to the village to see the people of Doddington! Whilst people weren't able to board the sleigh to see Santa for a 1-to-1, he was really keen on trying to cheer people up.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><div class="tldate">2021</div></li>
+
+                    <li class="timelineHistory">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>Cancelled: CoronaVirus</h4>
+                                <p>
+                                    <small class="text-muted">2021</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>The 2021 Carnival and Sports Day were cancelled due to the Covid-19 pandemic.</p>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="timeline-inverted timelineHistory">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>Santa is coming to town!</h4>
+                                <p>
+                                    <small class="text-muted"><i class="glyphicon glyphicon-time"></i> Santa Run 2021</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>Again, Santa has asked to visit the village of Doddington, so make sure you come out to say hello!</p>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li><div class="tldate" style="background: red;">2022</div></li>
+
+
+                    <li class="timelineHistory">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>Sports Day's 100th Anniversary</h4>
+                                @*<p>
+                                <small class="text-muted">July 2012</small>
+                                </p>*@
+                            </div>
+                            <div class="tl-body">
+                                @*<p>Here you'll find some beautiful photography for your viewing pleasure, courtesy of <a href="http://lorempixel.com/">lorempixel</a>.</p>
+
+                                <p><img src="http://lorempixel.com/600/300/nightlife/" alt="lorem pixel"></p>*@
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p>&nbsp;</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END PAGE | ABOUT -->
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+    }
+}

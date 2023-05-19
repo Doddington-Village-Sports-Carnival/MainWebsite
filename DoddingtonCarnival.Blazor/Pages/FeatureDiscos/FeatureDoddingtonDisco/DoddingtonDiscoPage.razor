@@ -1,0 +1,40 @@
+﻿@page "/discos/doddingtondisco"
+@page "/doddingtondisco"
+
+@inject NavigationManager NavManager
+
+<PageTitle>Doddington Disco - Doddington Carnival</PageTitle>
+
+<title>Doddington Disco</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="container"> 
+
+        <header>
+            <h4 class="line-divider" @onclick="NavigateToParent">Discos</h4>
+            <h1>Doddington Disco</h1>
+        </header>
+
+        <div class="px-4 py-5 my-5 text-center">
+            <div class="col-lg-12 mx-auto">
+
+                <SharedNextEvent Tag="Doddington Disco" />
+
+            </div>
+        </div>
+
+        <p>Stuff in here.</p>
+       
+    </div>
+</div>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+    }
+
+    private void NavigateToParent()
+    {
+        NavManager.NavigateTo("/discos");
+    }
+}

@@ -1,0 +1,37 @@
+﻿@page "/carnival/parade"
+
+@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+
+@inject FloatsService floatsService
+@inject NavigationManager NavManager
+
+<PageTitle>Parade - Doddington Carnival</PageTitle>
+
+<title>Carnival Parade?</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="container">
+
+        <header>
+            <h4 class="line-divider" @onclick="NavigateToParent">Carnival</h4>
+            <h1>Carnival Parade</h1>
+        </header>
+
+        <SharedMasonryImages baseService=floatsService />
+    </div>
+</div>
+
+@code {
+    IEnumerable<CarnivalImage>? imagesList = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        this.imagesList = floatsService.GetAll();
+    }
+
+    private void NavigateToParent()
+    {
+        NavManager.NavigateTo("/carnival");
+    }
+}

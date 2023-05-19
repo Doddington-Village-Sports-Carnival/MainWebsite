@@ -1,0 +1,32 @@
+﻿
+
+.jumbotron {
+    background-image: url(images/Pages/Home/CarnivalLorry.jpg);
+    background-size: cover;
+    height: 100%;
+    color: white;
+    margin-bottom: 15px;
+}
+
+    .jumbotron .container {
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.features {
+}
+
+    .features .feature {
+        margin-bottom: 10px;
+    }
+
+        .features .feature h5 {
+            font-weight: bold;
+        }
+
+        .features .feature p {
+            line-height: 20px;
+            height: 80px;
+        }

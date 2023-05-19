@@ -1,0 +1,37 @@
+﻿@page "/scarecrows/enter"
+
+@inject NavigationManager NavManager
+
+<PageTitle>Enter the Scarecrow Competition - Doddington Carnival</PageTitle>
+
+<title>Doddington Scarecrow Competition</title>
+
+@{
+    var formReturns = new DateTime(2022, 06, 24);
+
+    var displayStart = new DateTime(2022, 06, 26);
+    var displayEnd = new DateTime(2022, 07, 03);
+
+    var judgingWeekStart = new DateTime(2022, 06, 27);
+}
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="overlay"></div>
+    <div class="container">
+        <header>
+            <h4 class="line-divider" @onclick="NavigateToParent">Scarecrows</h4>
+            <h1>Enter a Scarecrow!</h1>
+
+        </header>
+
+        <div class="row">
+        </div>
+
+    </div>
+</div>
+@code {
+    private void NavigateToParent()
+    {
+        NavManager.NavigateTo("/scarecrows");
+    }
+}

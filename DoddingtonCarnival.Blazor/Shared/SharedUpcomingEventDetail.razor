@@ -1,0 +1,21 @@
+﻿@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+
+@inject CalendarService calendarService
+
+@if (theEvent != null)
+{
+    <p class="lead"><span class="text-bold">@theEvent.Start.ToLongDateString()</span> - @theEvent.Title</p>
+}
+
+@code {
+    CalendarEntry? theEvent;
+
+    [Parameter]
+    public string? Tag { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        theEvent = calendarService.GetNext(this.Tag);
+    }
+}

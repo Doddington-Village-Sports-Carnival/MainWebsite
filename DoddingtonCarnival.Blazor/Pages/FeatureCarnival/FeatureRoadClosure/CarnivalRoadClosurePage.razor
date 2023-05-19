@@ -1,0 +1,51 @@
+﻿@page "/carnival/roadclosure"
+
+@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+
+@inject FancyDressService fancydressService
+@inject NavigationManager NavManager
+
+<PageTitle>CARNIVAL PARADE</PageTitle>
+
+<title>Carnival Parade?</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="container">
+
+        <header>
+            <h4 class="line-divider" @onclick="NavigateToParent">Carnival</h4>
+            <h1>Road Closure</h1>
+        </header>
+
+        <div class="container col-xxl-8 px-4 py-5">
+
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5 text-center">
+                <p class="headerTitle">Carnival is on the morning of the first Saturday in July each year, and the parade reaches throughout the village.</p>
+                <p class="headerTitle">
+                    To create a safe environment during the Carnival procession, a road closure is enforced. Residents of Doddington should be aware.
+                </p>
+                <SharedNextEvent Tag="Carnival Parade" />
+            </div>
+
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-lg-12">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Road Closure Times</h1>
+                    <p class="lead text-bold">Saturday 1st July 2023</p>
+                    <p class="lead">09:00 - Road closure through the village of Doddington.</p>
+                    <p class="lead">10:30 - The start of the Carnival Parade.</p>
+                    <p class="lead">12:00 - Anticipated end of the Carnival Parade.</p>
+                    <p class="lead">12:30 - Road re-opens.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@code {
+    private void NavigateToParent()
+    {
+        NavManager.NavigateTo("/carnival");
+    }
+}

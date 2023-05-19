@@ -1,0 +1,72 @@
+﻿.carnivalpage{
+    padding-top: 0;
+}
+
+.jumbotron {
+} 
+
+    .jumbotron.doddingtonLorry {
+        background-image: url(images/Pages/Home/CarnivalLorry.jpg);
+        background-size: cover;
+        height: 100%;
+        color: white;
+        margin-bottom: 15px;
+    }
+
+    .jumbotron .containerImage {
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.features {
+}
+
+    .features .feature {
+        margin-bottom: 10px;
+        margin-right: 0 !important;
+    }
+
+        .features .feature h5 {
+            font-weight: bold;
+        }
+
+        .features .feature p {
+            line-height: 20px;
+            height: 80px;
+        }
+
+
+img {
+    width: 100%;
+}
+
+.masonry {
+    column-count: 4;
+    column-gap: 16px;
+}
+
+    .masonry .mItem {
+        display: inline-block;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+
+@media (max-width: 1199px) {
+    .masonry {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 991px) {
+    .masonry {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 767px) {
+    .masonry {
+        column-count: 1;
+    }
+}

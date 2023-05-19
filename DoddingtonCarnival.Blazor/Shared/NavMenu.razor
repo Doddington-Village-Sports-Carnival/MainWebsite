@@ -1,0 +1,74 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">DVSC</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="calendar">
+                <span class="oi oi-media-play" aria-hidden="true"></span> Calendar
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+        <NavLink class="nav-link" href="pubquiz">
+        <span class="oi oi-media-play" aria-hidden="true"></span> Pub Quiz
+        </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="scarecrows">
+                <span class="oi oi-media-play" aria-hidden="true"></span> Scarecrows
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="carnival">
+                <span class="oi oi-media-play" aria-hidden="true"></span> Carnival
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="sportsafternoon">
+                <span class="oi oi-media-play" aria-hidden="true"></span> Sports Afternoon
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="princeandprincess">
+                <span class="oi oi-media-play" aria-hidden="true"></span> Prince & Princess
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="santarun">
+                <span class="oi oi-media-play" aria-hidden="true"></span> Santa Run
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="themes">
+                <span class="oi oi-media-play" aria-hidden="true"></span> Themes
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="donations">
+                <span class="oi oi-media-play" aria-hidden="true"></span> Donations
+            </NavLink>
+        </div>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

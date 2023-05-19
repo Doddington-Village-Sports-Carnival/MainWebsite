@@ -1,0 +1,139 @@
+﻿@page "/princeandprincess"
+
+@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+
+@inject PrinceAndPrincessService princeandprincessService
+
+<PageTitle>Prince & Princess - Doddington Carnival</PageTitle>
+
+<title>The Doddington Carnival Prince & Princess</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="overlay"></div>
+    <div class="container">
+
+        <header>
+            <h4 class="line-divider">Prince & Princess</h4>
+            <h1>Carnival Royalty</h1>
+        </header>
+
+        <div class="container col-xxl-8 px-4 py-5">
+
+            <SfCarousel>
+                <CarouselItem>
+                    <figure class="img-container">
+                        <img src="images/pages/Carnival/PrinceAndPrincess/PrinceAndPrincess2022 (7).jpg" alt="2022" style="height:100%;width:100%;" />
+                        <figcaption class="img-caption">2022</figcaption>
+                    </figure>
+                </CarouselItem>
+                <CarouselItem>
+                    <figure class="img-container">
+                        <img src="images/pages/Carnival/PrinceAndPrincess/PrinceAndPrincess2018 (9).jpg" alt="2018" style="height:100%;width:100%;" />
+                        <figcaption class="img-caption">2018</figcaption>
+                    </figure>
+                </CarouselItem>
+                <CarouselItem>
+                    <figure class="img-container">
+                        <img src="images/pages/Carnival/PrinceAndPrincess/PrinceAndPrincess2017 (22).jpg" alt="2017" style="height:100%;width:100%;" />
+                        <figcaption class="img-caption">2017</figcaption>
+                    </figure>
+                </CarouselItem>
+                <CarouselItem>
+                    <figure class="img-container">
+                        <img src="images/pages/Carnival/PrinceAndPrincess/PrinceAndPrincess2017 (4).jpg" alt="2017" style="height:100%;width:100%;" />
+                        <figcaption class="img-caption">2017</figcaption>
+                    </figure>
+                </CarouselItem>
+                <CarouselItem>
+                    <figure class="img-container">
+                        <img src="images/pages/Carnival/PrinceAndPrincess/PrinceAndPrincess2016 (3).jpg" alt="2016" style="height:100%;width:100%;" />
+                        <figcaption class="img-caption">2016</figcaption>
+                    </figure>
+                </CarouselItem>
+            </SfCarousel>
+
+            <div class="card eventCard">
+                <div class="card-body">
+                    <p class="eventHeading">Event Details</p>
+
+                    <p>Each year, we select a pair of enthusiastic young people from the community to represent Doddington Carnival and its values. </p>
+                    <p>The Carnival Prince and Princess serve as role models for other children in the community, promoting a sense of pride and unity and inspiring others to get involved in the festivities. </p>
+                    <p>They lead the procession and play a key role in the opening ceremonies, helping to kick-start the celebrations in style. </p>
+                    <p>With their dazzling smiles, infectious energy, and unwavering commitment to the carnival, our Prince and Princess are sure to capture the hearts and imaginations of everyone who attends. </p>
+                    <p>So join us in celebrating the next generation of carnival royalty, and let's make this year's festivities the best yet!</p>
+
+                    <SharedNextEvent Tag="Prince and Princess Selection" />
+                </div>
+            </div>
+
+            <div class="card eventCard">
+                <div class="card-header">
+                    Picnic in the Park, including the Carnival Prince & Princess Selection
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Come and join us to celebrate the King's Coronation, with an interlude to select the next Prince and Princess for the 2023!</p>
+                            <p>Supported by Doddington Parish Council.</p>
+                            <p>From 11:30 to 15:30</p>
+                            <p>Bring your own picnic.</p>
+                            <p>Ice cream van and Raffle.</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="eventHeading">Prince & Princess Application Form</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <a href="/pdfs/PrinceAndPrincess/2023 P&P Applcation Form.pdf" target="_blank" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Download now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card eventCard">
+                <div class="card-header">
+                    Previous Princes and Princesses
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>A selection of photos of the former Princes and Princesses throughout the years!</p>
+
+                            <a href="/princeandprincess/photos" class="btn btn-primary btn-block btn-lg px-4 me-md-2">See the photos</a>
+                        </div>
+                        <div class="col-6">
+                            <img src="images/pages/Carnival/PrinceAndPrincess/PrinceAndPrincess2022 (2).jpg" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+ 
+@*
+
+
+            <hr />
+
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Download Poster</h1>
+                    <p class="lead">Download the Picnic in the Park Poster (PDF) file.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="/pdfs/PrinceAndPrincess/2023 P&P Picnic.pdf" target="_blank" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Download now</a>
+                    </div>
+                </div>
+
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="/images/pages/princeandprincess/2023 p&p picnic.jpg" class="d-block mx-lg-auto img-fluid" alt="" height="250" loading="lazy">
+                </div>
+            </div>
+*@
+           
+            
+        </div>
+    </div>
+</div>
+
+@code {
+
+}

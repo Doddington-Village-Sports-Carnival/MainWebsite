@@ -1,0 +1,41 @@
+﻿@page "/discos/princeandprincess"
+
+@inject NavigationManager NavManager
+
+<PageTitle>Prince & Princess Disco - Doddington Carnival</PageTitle>
+
+<title>Prince And Princess Disco</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="container">
+
+        <header>
+            <h4 class="line-divider" @onclick="NavigateToParent">Discos</h4>
+            <h1>Prince And Princess Selection Disco</h1>
+        </header>
+
+        <div class="px-4 py-5 my-5 text-center">
+            <div class="col-lg-12 mx-auto">
+
+                <SharedNextEvent Tag="Prince and Princess" />
+
+            </div>
+        </div>
+
+
+        <p>Stuff in here about the disco itself, when it is, where it is and who is allowed to drop by!</p>
+       
+    </div>
+</div>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        
+    }
+
+    private void NavigateToParent()
+    {
+        NavManager.NavigateTo("/discos");
+    }
+}

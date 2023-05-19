@@ -1,0 +1,36 @@
+﻿@page "/carnival/parade/enter"
+
+@inject NavigationManager NavManager
+
+<PageTitle>Enter the Parade - Doddington Carnival</PageTitle>
+
+<title>Carnival Parade?</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="container">
+
+        <header>
+            <h4 class="line-divider" @onclick="NavigateToParent">Carnival</h4>
+            <h1>Enter the Carnival Parade!</h1>
+        </header>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+
+                <p>Here's how you get a float!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+    }
+
+    private void NavigateToParent()
+    {
+        NavManager.NavigateTo("/carnival");
+    }
+}

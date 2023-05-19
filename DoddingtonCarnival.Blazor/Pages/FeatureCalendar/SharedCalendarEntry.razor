@@ -1,0 +1,87 @@
+﻿@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+
+@inject LocationsService locationsService
+
+@if (calendarEntry != null)
+{
+    var fontModifier = "";
+    var titleColour = "carnivalpage-orange-accent";
+
+    var visibilityModifier = "";
+
+    if (calendarEntry.End < DateTime.Now)
+    {
+        fontModifier = "past";
+        titleColour = "Grey";
+
+        if (showPastEvents == false)
+        {
+            visibilityModifier = "hidden";
+        }
+    }
+
+    <div class="row calendarEvent @visibilityModifier @fontModifier">
+        <div class="col-lg-1 col-md-2 dateDetails d-none d-sm-none d-md-block d-lg-block d-xl-block">
+            <div class="month">@calendarEntry.Start.ToString("MMM").ToUpper()</div>
+            <div class="day">@calendarEntry.Start.Day.ToString("00")</div>
+            <div class="year">@calendarEntry.Start.Year</div>
+        </div>
+        <div class="col-sm-12 dateDetails d-sm-block d-md-none d-lg-none d-xl-none" style="text-align: left !important;--bs-gutter-x: 0;">
+            <span class="day">@calendarEntry.Start.Day.ToString("00")</span>
+            <span class="day">@calendarEntry.Start.ToString("MMM").ToUpper()</span>
+            <span class="day">@calendarEntry.Start.Year</span>
+        </div>
+
+        <div class="col locationDetails">
+            <div class="row time">@calendarEntry.Start.DayOfWeek @calendarEntry.EventTimes</div>
+            <div class="row title @titleColour">@calendarEntry.Title</div>
+
+            <div class="row location">
+                @locationsService.GetLocationString(@calendarEntry.LocationId)
+            </div>
+            <div class="row details">
+                @foreach (var description in calendarEntry.Descriptions)
+                {
+                    <p class="">@description</p>
+                }
+
+                @*@if (calendarEntry.Tags is not null)
+                {
+                    <p>
+                        @foreach (var tag in calendarEntry.Tags)
+                        {
+                            @tag
+
+                            if (calendarEntry.Tags.Last() != tag)
+                            {
+                                <span> | </span>
+                            }
+                        }
+                    </p>
+                }*@
+            </div>
+        </div>
+
+        @if (!string.IsNullOrEmpty(calendarEntry.Link))
+        {
+            <div class="col-lg-1 col-md-2 goButton">
+                <a href="@calendarEntry.Link" class="btn btn-primary">MORE INFO!</a>
+            </div>
+        }
+    </div>
+}
+
+
+@code {
+    [Parameter]
+    public CalendarEntry? calendarEntry { get; set; }
+
+    [Parameter]
+    public bool showPastEvents { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+
+    }
+}

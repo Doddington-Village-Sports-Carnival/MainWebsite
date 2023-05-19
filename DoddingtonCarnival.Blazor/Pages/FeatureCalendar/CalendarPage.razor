@@ -1,0 +1,115 @@
+﻿@page "/calendar/{filter?}"
+
+@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+@inject CalendarService calendarService
+@inject LocationsService locationsService
+
+<PageTitle>Calendar - Doddington Carnival</PageTitle>
+
+<title>What's going on and when?</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="container">
+
+        @if (showPastEvents)
+        {
+            if (nextCalendarEntry != null)
+            {
+                <header>
+                    <h4 class="line-divider">Calendar</h4>
+                    <h1>Up Next</h1>
+                </header>
+
+                <SharedCalendarEntry calendarEntry="nextCalendarEntry" />
+            }
+        }
+
+        <header>
+            <h1>All Diary Dates</h1>
+        </header>
+
+        <div class="centercontent">
+            <button type="button" class="btn btn-primary" @onclick="ShowHidePastEvents">@pastEventsButtonText</button>
+            <span> | </span>
+
+            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" @onclick="@(e => ApplyFilter("Carnival Day"))">
+            <label class="btn btn-secondary" for="option1">Carnival Day</label>
+
+            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" @onclick="@(e => ApplyFilter("Meeting"))">
+            <label class="btn btn-secondary" for="option2">Meetings</label>
+
+            <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" @onclick="@(e => ApplyFilter("Scarecrow"))">
+            <label class="btn btn-secondary" for="option3">Scarecrows</label>
+
+            <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off" @onclick="@(e => ApplyFilter("Santa Run"))">
+            <label class="btn btn-secondary" for="option4">Santa Run</label>
+
+            <input type="radio" class="btn-check" name="options" id="option6" autocomplete="off" @onclick="@(e => ApplyFilter("Pub Quiz"))">
+            <label class="btn btn-secondary" for="option6">Pub Quiz</label>
+
+            <input type="radio" class="btn-check" name="options" id="option7" autocomplete="off" @onclick="@(e => ApplyFilter("Prince & Princess"))">
+            <label class="btn btn-secondary" for="option7">P&P</label>
+
+            <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off" checked @onclick="@(e => ApplyFilter(string.Empty))">
+            <label class="btn btn-secondary" for="option5">Clear Filter</label>
+
+        </div>
+
+        @{
+            var filterResults = this.calendarEntries;
+
+            if (filterResults is not null)
+            {
+                if (!string.IsNullOrEmpty(filter))
+                {
+                    filterResults = filterResults.Where(x => x.Tags.Contains(filter));
+                }
+
+                @foreach (var calendarEntry in filterResults.OrderBy(x => x.Start))
+                {
+                    <SharedCalendarEntry calendarEntry="calendarEntry" showPastEvents="showPastEvents" />
+                }
+            }
+        }
+
+    </div>
+</div>
+
+@code {
+    private CalendarEntry? nextCalendarEntry;
+    private IEnumerable<CalendarEntry>? calendarEntries;
+
+    private bool showPastEvents { get; set; } = false;
+    private string pastEventsButtonText = "Show Past Events";
+
+    [Parameter]
+    public string? filter { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        calendarEntries = calendarService.GetAll();
+        nextCalendarEntry = calendarService.GetNext();
+    }
+
+    private void ShowHidePastEvents()
+    {
+        if (showPastEvents == false)
+        {
+            pastEventsButtonText = "Hide Past Events";
+        }
+        else
+        {
+            pastEventsButtonText = "Show Past Events";
+        }
+
+        showPastEvents = !showPastEvents;
+    }
+
+    private void ApplyFilter(string theFilter)
+    {
+        this.filter = theFilter;
+
+        StateHasChanged();
+    }
+}
