@@ -317,8 +317,8 @@
   {
     "Title": "Quiz Night",
     "SubTitle": null,
-    "Start": "2023-09-30T20:00:00",
-    "End": "2023-09-30T22:30:00",
+    "Start": "2023-09-23T20:00:00",
+    "End": "2023-09-23T22:30:00",
     "Descriptions": [
       "Come and test your knowledge at our upcoming Pub Quiz Night, which is being held to raise funds for the Doddington Village Sports & Carnival.",
       "Max of 6 people per team; Winners will receive 50% of the Entry Money."
@@ -328,7 +328,7 @@
       "Pub Quiz"
     ],
     "Link": "/pubquiz",
-    "EventDates": "2023 September 30",
+    "EventDates": "2023 September 23",
     "EventTimes": "20:00 to 22:30",
     "IsDone": true
   },
