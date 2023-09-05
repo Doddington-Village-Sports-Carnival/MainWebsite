@@ -314,6 +314,81 @@
     "EventTimes": "13:30 to 18:00",
     "IsDone": false
   },
+
+
+  {
+    "Title": "Monthly Meeting",
+    "SubTitle": null,
+    "Start": "2023-09-07T20:00:00",
+    "End": "2023-09-07T21:00:00",
+    "Descriptions": [
+      "Monthly meeting for the Doddington Village Sports and Carnival Committee to discuss what is coming up next.",
+      "Please feel free to come along! Everyone is welcome and new input is always appreciated!"
+    ],
+    "LocationId": "ChurchRooms",
+    "Tags": [
+      "Meeting"
+    ],
+    "Link": null,
+    "EventDates": "2023 September 07",
+    "EventTimes": "20:00 to 21:00",
+    "IsDone": true
+  },
+  {
+    "Title": "Monthly Meeting",
+    "SubTitle": null,
+    "Start": "2023-10-12T20:00:00",
+    "End": "2023-10-12T21:00:00",
+    "Descriptions": [
+      "Monthly meeting for the Doddington Village Sports and Carnival Committee to discuss what is coming up next.",
+      "Please feel free to come along! Everyone is welcome and new input is always appreciated!"
+    ],
+    "LocationId": "ChurchRooms",
+    "Tags": [
+      "Meeting"
+    ],
+    "Link": null,
+    "EventDates": "2023 October 12",
+    "EventTimes": "20:00 to 21:00",
+    "IsDone": true
+  },
+  {
+    "Title": "Monthly Meeting",
+    "SubTitle": null,
+    "Start": "2023-11-09T20:00:00",
+    "End": "2023-11-09T21:00:00",
+    "Descriptions": [
+      "Monthly meeting for the Doddington Village Sports and Carnival Committee to discuss what is coming up next.",
+      "Please feel free to come along! Everyone is welcome and new input is always appreciated!"
+    ],
+    "LocationId": "ChurchRooms",
+    "Tags": [
+      "Meeting"
+    ],
+    "Link": null,
+    "EventDates": "2023 November 09",
+    "EventTimes": "20:00 to 21:00",
+    "IsDone": true
+  },
+  {
+    "Title": "Monthly Meeting",
+    "SubTitle": null,
+    "Start": "2023-12-14T20:00:00",
+    "End": "2023-12-14T21:00:00",
+    "Descriptions": [
+      "Monthly meeting for the Doddington Village Sports and Carnival Committee to discuss what is coming up next.",
+      "Please feel free to come along! Everyone is welcome and new input is always appreciated!"
+    ],
+    "LocationId": "ChurchRooms",
+    "Tags": [
+      "Meeting"
+    ],
+    "Link": null,
+    "EventDates": "2023 December 14",
+    "EventTimes": "20:00 to 21:00",
+    "IsDone": true
+  },
+
   {
     "Title": "Quiz Night",
     "SubTitle": null,
