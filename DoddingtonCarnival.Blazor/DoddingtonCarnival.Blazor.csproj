@@ -729,6 +729,7 @@
 
   <ItemGroup>
     <Folder Include="Data\2016\" />
+    <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="wwwroot\fonts\" />
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
