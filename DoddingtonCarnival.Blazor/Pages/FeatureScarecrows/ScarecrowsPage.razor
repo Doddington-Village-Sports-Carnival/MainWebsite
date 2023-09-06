@@ -176,10 +176,10 @@
 
         if (scarecrowEntries != null)
         {
-            deadline = scarecrowEntries.FirstOrDefault(x => x.Tags.Contains("Deadline"))?.Start;
-            displayStart = scarecrowEntries.FirstOrDefault(x => x.Tags.Contains("Display"))?.Start;
-            displayEnd = scarecrowEntries.FirstOrDefault(x => x.Tags.Contains("Display"))?.End;
-            judgingStart = scarecrowEntries.FirstOrDefault(x => x.Tags.Contains("Judging"))?.Start;
+            deadline = scarecrowEntries.FirstOrDefault(x => x.Tags.Contains("Deadline"))?.StartDateTime;
+            displayStart = scarecrowEntries.FirstOrDefault(x => x.Tags.Contains("Display"))?.StartDateTime;
+            displayEnd = scarecrowEntries.FirstOrDefault(x => x.Tags.Contains("Display"))?.EndDateTime;
+            judgingStart = scarecrowEntries.FirstOrDefault(x => x.Tags.Contains("Judging"))?.StartDateTime;
         }
     }
 }

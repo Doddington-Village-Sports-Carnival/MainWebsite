@@ -5,7 +5,7 @@
 
 @if (theEvent != null)
 {
-    <p class="lead"><span class="text-bold">@theEvent.Start.ToLongDateString()</span> - @theEvent.Title</p>
+    <p class="lead"><span class="text-bold">@theEvent.StartDateTime.ToLongDateString()</span> - @theEvent.Title</p>
 }
 
 @code {

@@ -33,7 +33,7 @@
             <button type="button" class="btn btn-primary" @onclick="ShowHidePastEvents">@pastEventsButtonText</button>
             <span> | </span>
 
-            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" @onclick="@(e => ApplyFilter("Carnival Day"))">
+            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" @onclick="@(e => ApplyFilter("Carnival-Day"))">
             <label class="btn btn-secondary" for="option1">Carnival Day</label>
 
             <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" @onclick="@(e => ApplyFilter("Meeting"))">
@@ -42,7 +42,7 @@
             <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" @onclick="@(e => ApplyFilter("Scarecrow"))">
             <label class="btn btn-secondary" for="option3">Scarecrows</label>
 
-            <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off" @onclick="@(e => ApplyFilter("Santa Run"))">
+            <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off" @onclick="@(e => ApplyFilter("Santa-Run"))">
             <label class="btn btn-secondary" for="option4">Santa Run</label>
 
             <input type="radio" class="btn-check" name="options" id="option6" autocomplete="off" @onclick="@(e => ApplyFilter("Pub Quiz"))">
@@ -66,7 +66,7 @@
                     filterResults = filterResults.Where(x => x.Tags.Contains(filter));
                 }
 
-                @foreach (var calendarEntry in filterResults.OrderBy(x => x.Start))
+                @foreach (var calendarEntry in filterResults.OrderBy(x => x.StartDateTime))
                 {
                     <SharedCalendarEntry calendarEntry="calendarEntry" showPastEvents="showPastEvents" />
                 }
@@ -108,7 +108,7 @@
 
     private void ApplyFilter(string theFilter)
     {
-        this.filter = theFilter;
+        this.filter = theFilter.ToLower();
 
         StateHasChanged();
     }

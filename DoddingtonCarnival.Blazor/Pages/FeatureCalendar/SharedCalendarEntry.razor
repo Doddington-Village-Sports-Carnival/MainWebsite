@@ -10,7 +10,7 @@
 
     var visibilityModifier = "";
 
-    if (calendarEntry.End < DateTime.Now)
+    if (calendarEntry.EndDateTime < DateTime.Now)
     {
         fontModifier = "past";
         titleColour = "Grey";
@@ -23,30 +23,32 @@
 
     <div class="row calendarEvent @visibilityModifier @fontModifier">
         <div class="col-lg-1 col-md-2 dateDetails d-none d-sm-none d-md-block d-lg-block d-xl-block">
-            <div class="month">@calendarEntry.Start.ToString("MMM").ToUpper()</div>
-            <div class="day">@calendarEntry.Start.Day.ToString("00")</div>
-            <div class="year">@calendarEntry.Start.Year</div>
+            <div class="month">@calendarEntry.StartDateTime.ToString("MMM").ToUpper()</div>
+            <div class="day">@calendarEntry.StartDateTime.Day.ToString("00")</div>
+            <div class="year">@calendarEntry.StartDateTime.Year</div>
         </div>
         <div class="col-sm-12 dateDetails d-sm-block d-md-none d-lg-none d-xl-none" style="text-align: left !important;--bs-gutter-x: 0;">
-            <span class="day">@calendarEntry.Start.Day.ToString("00")</span>
-            <span class="day">@calendarEntry.Start.ToString("MMM").ToUpper()</span>
-            <span class="day">@calendarEntry.Start.Year</span>
+            <span class="day">@calendarEntry.StartDateTime.Day.ToString("00")</span>
+            <span class="day">@calendarEntry.StartDateTime.ToString("MMM").ToUpper()</span>
+            <span class="day">@calendarEntry.StartDateTime.Year</span>
         </div>
 
         <div class="col locationDetails">
-            <div class="row time">@calendarEntry.Start.DayOfWeek @calendarEntry.EventTimes</div>
+            <div class="row time">@calendarEntry.StartDateTime.DayOfWeek @calendarEntry.EventTimes</div>
             <div class="row title @titleColour">@calendarEntry.Title</div>
 
             <div class="row location">
-                @locationsService.GetLocationString(@calendarEntry.LocationId)
+                @* @locationsService.GetLocationString(@calendarEntry.LocationId) *@
+                @calendarEntry.Venue
             </div>
+
             <div class="row details">
-                @foreach (var description in calendarEntry.Descriptions)
+                @foreach (var description in calendarEntry.Description)
                 {
                     <p class="">@description</p>
                 }
 
-                @*@if (calendarEntry.Tags is not null)
+                @* @if (calendarEntry.Tags is not null)
                 {
                     <p>
                         @foreach (var tag in calendarEntry.Tags)
@@ -59,14 +61,14 @@
                             }
                         }
                     </p>
-                }*@
+                } *@
             </div>
         </div>
 
-        @if (!string.IsNullOrEmpty(calendarEntry.Link))
+        @if (!string.IsNullOrEmpty(calendarEntry.WebLink))
         {
             <div class="col-lg-1 col-md-2 goButton">
-                <a href="@calendarEntry.Link" class="btn btn-primary">MORE INFO!</a>
+                <a href="@calendarEntry.WebLink" class="btn btn-primary">MORE INFO!</a>
             </div>
         }
     </div>
