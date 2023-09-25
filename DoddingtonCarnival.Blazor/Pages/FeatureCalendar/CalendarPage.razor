@@ -29,7 +29,7 @@
             <h1>All Diary Dates!</h1>
         </header>
 
-        <div class="centercontent">
+       @*  <div class="centercontent">
             <button type="button" class="btn btn-primary" @onclick="ShowHidePastEvents">@pastEventsButtonText</button>
             <span> | </span>
 
@@ -54,7 +54,7 @@
             <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off" checked @onclick="@(e => ApplyFilter(string.Empty))">
             <label class="btn btn-secondary" for="option5">Clear Filter</label>
 
-        </div>
+        </div> *@
 
         @{
             var filterResults = this.calendarEntries;
