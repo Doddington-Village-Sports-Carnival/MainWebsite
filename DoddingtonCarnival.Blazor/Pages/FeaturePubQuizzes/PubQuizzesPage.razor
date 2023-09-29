@@ -1,18 +1,30 @@
 ﻿@page "/pubquiz"
 
-<PageTitle>pub Quizzes - Doddington Carnival</PageTitle>
+<PageTitle>Pub Quizzes - Doddington Carnival</PageTitle>
 
 <title>Pub Quizzes</title>
 
 <div class="carnivalpage pages paralax carnivalpage-darkblue">
     <div class="container">
 
-        <header>
-            <h4 class="line-divider">Pub Quiz</h4>
-            <h1>Quiz Night!</h1>
-        </header>
+        @*         <header>
+        <h4 class="line-divider">Pub Quiz</h4>
+        <h1>Quiz Night!</h1>
+        </header> *@
 
-        <div class="container col-xxl-8 px-4 py-5">
+        <div class="container col-xxl-8 px-4 py-1">
+
+            <div class="row bannerImage carnivalPubQuiz"></div>
+
+            <div class="row eventBanner">
+                <div class="title">
+                    Pub Quiz Night!
+                </div>
+                <div class="">
+                    23 September 2023
+                </div>
+
+            </div>
 
             <div class="card eventCard">
                 <div class="card-body">
@@ -54,37 +66,72 @@
                                 <p>Coming soon!</p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
 
-            @*<div class="card eventCard">
+            <DoddingtonCarnival.Blazor.Shared.Venues.TheThreeTunsComponent />
+
+            <div class="card eventCard">
                 <div class="card-header">
-                    Saturday 25th March 2023
+                    Previous Years Photo Albums
                 </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-6">
-                            <p class="eventHeading">At The Three Tuns, Doddington</p>
-                            <p>
-                                <ul>
-                                    <li>8pm Start, so get there early!</li>
-                                    <li>Entry fee is £2 per person.</li>
-                                    <li>Up to 6 people per team.</li>
-                                    <li>Winners will receive 50% of the Entry Money.</li>
-                                    <li>(No mobile phones!)</li>
-                                </ul>
-                            </p>
 
-                        </div>
-                        <div class="col-6">
-                            <p class="eventHeading">Download the Quiz Night Poster</p>
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                                <a href="/pdfs/PubQuiz/2023 Pub Quiz Poster.pdf" target="_blank" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Download now</a>
-                            </div>
-                        </div>
-                    </div>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <td>Year</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2023</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.714940024008286" target="_blank">September</a></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2016</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.1006062999455262" target="_blank">January</a></td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.1191386690922891" target="_blank">October</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                 </div>
+            </div>
+
+
+            @*<div class="card eventCard">
+            <div class="card-header">
+            Saturday 25th March 2023
+            </div>
+            <div class="card-body">
+            <div class="row">
+            <div class="col-6">
+            <p class="eventHeading">At The Three Tuns, Doddington</p>
+            <p>
+            <ul>
+            <li>8pm Start, so get there early!</li>
+            <li>Entry fee is £2 per person.</li>
+            <li>Up to 6 people per team.</li>
+            <li>Winners will receive 50% of the Entry Money.</li>
+            <li>(No mobile phones!)</li>
+            </ul>
+            </p>
+
+            </div>
+            <div class="col-6">
+            <p class="eventHeading">Download the Quiz Night Poster</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="/pdfs/PubQuiz/2023 Pub Quiz Poster.pdf" target="_blank" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Download now</a>
+            </div>
+            </div>
+            </div>
+            </div>
             </div>*@
 
         </div>

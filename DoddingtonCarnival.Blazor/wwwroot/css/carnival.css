@@ -3,6 +3,7 @@
     --doddington-orange: #E3AF1A;
     --doddington-yellow: #EEE114;
     --doddington-nav: RGBA(33,37,41,var(--bs-bg-opacity,1));
+    --doddington-xmas: #D11515;
 }
 
 @font-face {
@@ -867,6 +868,10 @@ html, body {
         background-image: url(/images/pages/Carnival/banner.jpg);
     }
 
+    .bannerImage.carnivalPubQuiz {
+        background-image: url(/images/pages/PubQuiz/banner.jpg);
+    }
+
 
 /* SyncFusion */
 .control-container {
@@ -919,4 +924,47 @@ html, body {
 
     .eventCard.card .eventDescription {
         text-align: justify;
+    }
+
+
+
+.eventBanner {
+    margin-top: 20px;
+    background-color: var(--doddington-orange);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    .eventBanner .title {
+        font-size: 2em;
+        color: var(--doddington-blue);
+        font-weight: bold;
+    }
+
+.footerIcons {
+    margin-bottom: 50px;
+}
+
+    .footerIcons .footerIcon {
+        font-size: 3em;
+        margin-left: 30px;
+        color: var(--doddington-orange);
+    }
+
+        .footerIcons .footerIcon:first-child {
+            margin-left: 0px;
+        }
+
+.dinkyIcons {
+    font-size: 3em;
+    margin-left: 30px;
+    color: var(--doddington-blue);
+}
+
+    .dinkyIcons.xmas {
+        color: var(--doddington-xmas);
+    }
+
+    .dinkyIcons:first-child {
+        margin-left: 0px;
     }

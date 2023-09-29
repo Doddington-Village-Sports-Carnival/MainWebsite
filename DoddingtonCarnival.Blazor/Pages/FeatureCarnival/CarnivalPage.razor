@@ -2,6 +2,11 @@
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
+@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+@using System.Globalization;
+
+@inject CalendarService calendarService
 
 <PageTitle>Carnival - Doddington Carnival</PageTitle>
 
@@ -10,12 +15,12 @@
 <div class="carnivalpage pages paralax carnivalpage-darkblue">
     <div class="container">
 
-        <header>
+@*         <header>
             <h4 class="line-divider">Carnival</h4>
             <h1>Doddington Carnival</h1>
-        </header>
+        </header> *@
 
-        <div class="container col-xxl-8 px-4 py-5">
+        <div class="container col-xxl-8 px-4 py-1">          
 
             <div class="control-container">
                 <SfCarousel>
@@ -58,6 +63,15 @@
                 </SfCarousel>
             </div>
 
+            <div class="row eventBanner">
+                <div class="title">
+                    Doddington Carnival
+                </div>
+                <div class="">
+                    @nextCarnival.Value.ToString("dddd dd MMMM yyyy", CultureInfo.InvariantCulture)
+                </div>
+
+            </div>
 
             <div class="card eventCard">
                 <div class="card-body">
@@ -66,6 +80,11 @@
                     <p>Doddington Village Carnival is on the morning of the first Saturday in July each year, and the parade reaches throughout the village. Come out and see the fantastic array of floats, bands and vehicles on display, each to tie-in to this year's theme and show-off the creativeness of the village.</p>
 
                     <SharedNextEvent Tag="Carnival Parade" />
+
+                    <p>
+                        <a href="https://www.facebook.com/events/328117913061794" target="_blank" class="dinkyIcons"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/doddingtoncarnival" target="_blank" class="dinkyIcons"><i class="bi bi-instagram"></i></a>
+                    </p>
                 </div>
             </div>
 
@@ -116,7 +135,6 @@
                 </div>
             </div>
 
-
             <div class="card eventCard">
                 <div class="card-header">
                     Road Closure
@@ -140,55 +158,104 @@
             </div>
 
 
+            <div class="card eventCard">
+                <div class="card-header">
+                    Previous Years Photo Albums
+                </div>
+                <div class="card-body">
 
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <td>Year</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2023</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.663591592476463" target="_blank">All Photos</a></td>
+                            </tr>
+                            <tr>
+                                <td>2022</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.5544542202273963" target="_blank">All Photos</a></td>
+                            </tr>
+                            <tr>
+                                <td>2019</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.2468292276565653" target="_blank">All Photos</a></td>
+                            </tr>
+                            <tr>
+                                <td>2018</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.1906496962745190" target="_blank">All Photos</a></td>
+                            </tr>
+                            <tr>
+                                <td>2017</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.1482180548510169" target="_blank">All Photos</a></td>
+                            </tr>
+                            <tr>
+                                <td>2016</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.1110577825670445" target="_blank">All Photos</a></td>
+                            </tr>
+                            <tr>
+                                <td>2015</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.906817866046443" target="_blank">All Photos</a></td>
+                            </tr>
+                            <tr>
+                                <td>2014</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.972251829503046" target="_blank">All Photos</a></td>
+                            </tr>
+                            <tr>
+                                <td>2013</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.972239036170992" target="_blank">All Photos</a></td>
+                            </tr>
+                            <tr>
+                                <td>2012</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.972224079505821" target="_blank">All Photos</a></td>
+                            </tr>
+                            <tr>
+                                <td>2011</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.972170586177837" target="_blank">All Photos</a></td>
+                            </tr>
+                            <tr>
+                                <td>2010</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.972035202858042" target="_blank">All Photos</a></td>
+                            </tr>
+                            <tr>
+                                <td>2009</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.972033046191591" target="_blank">All Photos</a></td>
+                            </tr>
+                            <tr>
+                                <td>2008</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.972030219525207" target="_blank">All Photos</a></td>
+                            </tr>
+                            <tr>
+                                <td>2007</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.972023626192533" target="_blank">All Photos</a></td>
+                            </tr>
+                            <tr>
+                                <td>2005</td>
+                                <td><a href="https://www.facebook.com/media/set/?set=a.972022039526025" target="_blank">All Photos</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-            @*<hr />
-
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-lg-12">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Focal Points</h1>
-            <p class="lead text-bold">Saturday 1st July 2023</p>
-            <p class="lead">BBQ @@ The George, Doddington.</p>
-            <p class="lead">BBQ @@ The Three Tuns, Doddington.</p>
+                </div>
             </div>
-            </div>*@
 
-
-            @*<hr />
-
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-            <img src="images/Pages/Carnival/FloatJudges.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
-            </div>
-            <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Floats Competition</h1>
-            <p class="lead">Our judges will decide the winner and award prizes to the best floats in the parade. </p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <a href="/carnival/floats" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to Floats</a>
-            </div>
-            </div>
-            </div>
-
-            <hr />
-
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-
-            <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Carnival Results</h1>
-            <p class="lead">Get creative and get making a fancy dress as part of our competition!</p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <a href="/results" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to Results</a>
-            </div>
-            </div>
-
-            <div class="col-10 col-sm-8 col-lg-6">
-            <img src="" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
-            </div>
-            </div>*@
         </div>
     </div>
 </div>
 
 @code {
+    DateTime? nextCarnival;
 
+    protected override async Task OnInitializedAsync()
+    {
+        var nextCarnivalEvent = calendarService.GetAll("carnival-day").OrderBy(x => x.StartDateTime).FirstOrDefault();
+
+        if (nextCarnivalEvent != null)
+        {
+            nextCarnival = nextCarnivalEvent.StartDateTime;
+        }
+    }
 }

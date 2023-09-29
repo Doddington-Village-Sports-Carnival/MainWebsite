@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\fonts\**" />
+    <Compile Remove="wwwroot\js\**" />
+    <Content Remove="wwwroot\fonts\**" />
+    <Content Remove="wwwroot\js\**" />
+    <EmbeddedResource Remove="wwwroot\fonts\**" />
+    <EmbeddedResource Remove="wwwroot\js\**" />
+    <None Remove="wwwroot\fonts\**" />
+    <None Remove="wwwroot\js\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="wwwroot\favicon.ico" />
     <Resource Include="wwwroot\images\santarun\2021Route.jpg" />
     <Resource Include="wwwroot\images\santarun\background.fw.png" />
@@ -731,14 +742,13 @@
     <Folder Include="Data\2016\" />
     <Folder Include="Data\2024\" />
     <Folder Include="Properties\PublishProfiles\" />
-    <Folder Include="wwwroot\fonts\" />
-    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\images\venues\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Syncfusion.Blazor" Version="21.2.3" />
-    <PackageReference Include="Syncfusion.Blazor.Themes" Version="21.2.3" />
+    <PackageReference Include="Syncfusion.Blazor" Version="23.1.38" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="23.1.38" />
   </ItemGroup>
 
 </Project>
