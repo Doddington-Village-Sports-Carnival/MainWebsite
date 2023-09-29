@@ -1,10 +1,5 @@
 ﻿@page "/scarecrows"
 
-@using DoddingtonCarnival.Blazor.Services
-@using DoddingtonCarnival.Blazor.Models
-
-@inject CalendarService calendarService
-
 <PageTitle>Scarecrows - Doddington Carnival</PageTitle>
 
 <title>Doddington Scarecrow Competition</title>
@@ -32,50 +27,9 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-lg-6 col-12">
-                    <div class="card eventCard">
-                        <div class="card-header">
-                            Official Schedule
-                        </div>
-                        <div class="card-body">
+            <ScarecrowEntryComponent />
 
-                            <p class="eventHeading">Saturday 1st July 2023</p>
-                            <p>24th June - Entry Deadline.</p>
-                            <p>26th June - Entry Maps are available.</p>
-                            <p>26th June - Entries on show!</p>
-                            <p>26th June - Judging commences.</p>
-                        </div>
 
-                    </div>
-                </div>
-                <div class="col-lg-6 col-12">
-                    <div class="card eventCard">
-                        <div class="card-header">
-                            Entry Forms
-                        </div>
-                        <div class="card-body">
-
-                            <p class="eventHeading">Do you wanna build a Scarecrow??</p>
-
-                            <p>All details on what you need to do to enter are on the Entry Form!</p>
-                            <a href="/pdfs/scarecrows/2023_doddington_scarecrow_application_form.pdf" target="_blank" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Download now!</a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="card eventCard">
-                <div class="card-header">
-                    Map
-                </div>
-                <div class="card-body">
-
-                    <img src="images/Pages/Scarecrows/2023-MapTrail.jpg" class="d-block mx-lg-auto img-fluid" alt="" width="100%" loading="lazy">
-                     
-                </div>
-            </div>
 
             <div class="card eventCard">
                 <div class="card-header">
@@ -91,95 +45,15 @@
 
                             <a href="/scarecrows/previous" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Previous Entries</a>
                         </div>
-                        
                     </div>
                 </div>
             </div>
-
-            @*<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-lg-12">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Official Schedule</h1>
-
-            <SharedUpcomingEventDetail Tag="Scarecrow Entry Deadline" />
-            <SharedUpcomingEventDetail Tag="Scarecrow Maps" />
-            <SharedUpcomingEventDetail Tag="Scarecrow Display" />
-            <SharedUpcomingEventDetail Tag="Scarecrow Judging" />
-
-            </div>
-            </div>*@
-
-            @* <hr />
-
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-
-            <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Previous Entries</h1>
-            <p class="lead">Looking for inspiration? Checking out the previous entries?.</p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <a href="/scarecrows/previous" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to the Previous Entries</a>
-            </div>
-            </div>
-
-            <div class="col-10 col-sm-8 col-lg-6">
-            <img src="images/Pages/Scarecrows/Titles/PreviousEntries.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
-            </div>
-            </div>
-            *@
-
-
-            @* <hr />
-
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-            <img src="images/Pages/Scarecrows/Lion.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
-            </div>
-            <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">How to Build a Scarecrow</h1>
-            <p class="lead">Fancy having a go to create a Scarecrow for the village to see?</p>
-            <p class="lead">We'll help you to get started and get your Scarecrow ready for display!</p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <a href="/scarecrows/create" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to Build a Scarecrow</a>
-            </div>
-            </div>
-            </div>
-
-            <hr />
-
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-
-            <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Enter the Competition!</h1>
-            <p class="lead">Once you have your creation ready, you'll need to get it on display and in the competition.</p>
-            <p class="lead">Here's how you do that and get going quickly!</p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <a href="/scarecrows/enter" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to the Entry Details</a>
-            </div>
-            </div>
-
-            <div class="col-10 col-sm-8 col-lg-6">
-            <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
-            </div>
-            </div>*@
         </div>
     </div>
 </div>
 
 @code {
-    DateTime? deadline;
-    DateTime? displayStart;
-    DateTime? displayEnd;
-    DateTime? judgingStart;
-
     protected override async Task OnInitializedAsync()
     {
-        IEnumerable<CalendarEntry> scarecrowEntries = calendarService.GetAll("Scarecrow");
-
-        if (scarecrowEntries != null)
-        {
-            deadline = scarecrowEntries.FirstOrDefault(x => x.Tags.Contains("Deadline"))?.StartDateTime;
-            displayStart = scarecrowEntries.FirstOrDefault(x => x.Tags.Contains("Display"))?.StartDateTime;
-            displayEnd = scarecrowEntries.FirstOrDefault(x => x.Tags.Contains("Display"))?.EndDateTime;
-            judgingStart = scarecrowEntries.FirstOrDefault(x => x.Tags.Contains("Judging"))?.StartDateTime;
-        }
     }
 }

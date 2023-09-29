@@ -1,0 +1,53 @@
+﻿@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+@using System.Globalization;
+
+@inject CalendarService calendarService
+
+<div class="row">
+    @if (nextCarnival != null)
+    {
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <div class="card eventCard">
+                    <div class="card-header">
+                        Official Schedule @nextCarnival.Value.ToString("yyyy", CultureInfo.InvariantCulture)
+                    </div>
+                    <div class="card-body">
+                        <p class="eventHeading">@nextCarnival.Value.ToString("dddd dd MMMM yyyy", CultureInfo.InvariantCulture)</p>
+                        <p>07:00 - Gates open to the stall holders (for set-up only).</p>
+                        <p>13:30 - Gates open to the public.</p>
+                        <p>14:30 - Children's Races commence.</p>
+                        <p>18:00 - Expected end of day.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="card eventCard">
+                    <div class="card-header">
+                        Download Stall Form
+                    </div>
+                    <div class="card-body">
+                        <p>Download the Stall Form (PDF) file to register your interest for running a stall.</p>
+                        <a href="/pdfs/stalls/@(nextCarnival.Value.Year) field stall form.pdf" target="_blank" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Download now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+@code {
+    DateTime? nextCarnival;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var nextCarnivalEvent = calendarService.GetAll("carnival-day").OrderBy(x => x.StartDateTime).FirstOrDefault();
+
+        if (nextCarnivalEvent != null)
+        {
+            nextCarnival = nextCarnivalEvent.StartDateTime;
+        }
+    }
+}

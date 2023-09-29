@@ -26,7 +26,12 @@ namespace DoddingtonCarnival.Blazor.Services
 
         public IEnumerable<CalendarEntry>? GetAll(string tag)
         {
-            return GetAll()?.Where(x => x.StartDateTime.Year == DateTime.Now.Year && x.Tags.Contains(tag));
+            return GetAll()?.Where(x => x.StartDateTime.Year >= DateTime.Now.Year && x.Tags.Contains(tag));
+        }
+
+        public IEnumerable<CalendarEntry>? GetAll(int year, string tag)
+        {
+            return GetAll()?.Where(x => x.StartDateTime.Year == year && x.Tags.Contains(tag));
         }
 
         public CalendarEntry? GetNext(string? tag = null)
