@@ -1,7 +1,10 @@
-﻿@using DoddingtonCarnival.Blazor.Services
+﻿@using BlazorDownloadFile;
+@using DoddingtonCarnival.Blazor.Services
 @using DoddingtonCarnival.Blazor.Models
+@using System.Text;
 
 @inject LocationsService locationsService
+@inject IBlazorDownloadFileService BlazorDownloadFileService
 
 @if (calendarEntry != null)
 {
@@ -49,31 +52,34 @@
                 }
 
                 @* @if (calendarEntry.Tags is not null)
-                {
-                    <p>
-                        @foreach (var tag in calendarEntry.Tags)
-                        {
-                            @tag
+            {
+            <p>
+            @foreach (var tag in calendarEntry.Tags)
+            {
+            @tag
 
-                            if (calendarEntry.Tags.Last() != tag)
-                            {
-                                <span> | </span>
-                            }
-                        }
-                    </p>
-                } *@
+            if (calendarEntry.Tags.Last() != tag)
+            {
+            <span> | </span>
+            }
+            }
+            </p>
+            } *@
+            </div>
+
+
+
+            <div class="goButtons">
+                @if (!string.IsNullOrEmpty(calendarEntry.WebLink) && !calendarEntry.WebLink.EndsWith("/calendar"))
+                {
+                    <a href="@calendarEntry.WebLink" class="btn btn-primary btn-sm goButton">More Information</a>
+                }
+
+                <button @onclick="DownloadFile" class="btn btn-primary btn-sm goButton">Add to Calendar</button>
             </div>
         </div>
-
-        @if (!string.IsNullOrEmpty(calendarEntry.WebLink))
-        {
-            <div class="col-lg-1 col-md-2 goButton">
-                <a href="@calendarEntry.WebLink" class="btn btn-primary">MORE INFO!</a>
-            </div>
-        }
     </div>
 }
-
 
 @code {
     [Parameter]
@@ -82,8 +88,85 @@
     [Parameter]
     public bool showPastEvents { get; set; }
 
+    string Content = "Hello!";
+
     protected override async Task OnInitializedAsync()
     {
 
+    }
+
+    public async void DownloadFile()
+    {
+        if (this.calendarEntry == null)
+        {
+            return;
+        }
+
+        var contents = GenerateFileContents();
+
+        var memoryStream = ConvertMe(contents);
+
+        await BlazorDownloadFileService.DownloadFile($"DVSC_{this.calendarEntry.Title.Replace(" ", "-")}.ics", memoryStream, "application/octet-stream");
+    }
+
+    public string GenerateFileContents()
+    {
+        if (this.calendarEntry == null)
+        {
+            return "this file is intentionally blank!";
+        }
+
+        var stringBuilder = new StringBuilder();
+
+        stringBuilder.AppendLine("BEGIN:VCALENDAR");
+        stringBuilder.AppendLine("VERSION:2.0");
+        stringBuilder.AppendLine("PRODID:-//hacksw/handcal//NONSGML v1.0//EN");
+        stringBuilder.AppendLine("BEGIN:VEVENT");
+
+        stringBuilder.AppendLine($"DTSTAMP:{AsZuluString(this.calendarEntry.StartDateTime)}");
+        stringBuilder.AppendLine($"DTSTART:{AsZuluString(this.calendarEntry.StartDateTime)}");
+        stringBuilder.AppendLine($"DTEND:{AsZuluString(this.calendarEntry.EndDateTime)}");
+
+        stringBuilder.AppendLine("");
+        stringBuilder.AppendLine($"SUMMARY:Doddington Village Sports & Carnival - {this.calendarEntry.Title}");
+        stringBuilder.AppendLine($"LOCATION:{this.calendarEntry.Venue}");
+        stringBuilder.AppendLine($"DESCRIPTION:{GetDescription(this.calendarEntry.Description)}");
+        stringBuilder.AppendLine("END:VEVENT");
+        stringBuilder.AppendLine("END:VCALENDAR");
+
+        return stringBuilder.ToString();
+    }
+
+    public MemoryStream ConvertMe(string input)
+    {
+        byte[] byteArray = Encoding.UTF8.GetBytes(input);
+
+        MemoryStream stream = new MemoryStream(byteArray);
+
+        return stream;
+    }
+
+    public string AsZuluString(DateTime dateTime)
+    {
+        string foo = dateTime.ToUniversalTime().ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fff'Z'");
+
+        return foo;
+    }
+
+    public string GetDescription(List<string>? descriptionList)
+    {
+        if (descriptionList == null || !descriptionList.Any())
+        {
+            return "Nothing to see here!";
+        }
+
+        var stringBuilder = new StringBuilder();
+
+        foreach (var item in descriptionList)
+        {
+            stringBuilder.AppendLine(item);
+        }
+
+        return stringBuilder.ToString();
     }
 }

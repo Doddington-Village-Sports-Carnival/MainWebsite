@@ -1,3 +1,4 @@
+using BlazorDownloadFile;
 using DoddingtonCarnival.Blazor.Services;
 using Syncfusion.Blazor;
 
@@ -21,6 +22,8 @@ namespace DoddingtonCarnival.Blazor
             builder.Services.AddSingleton<FancyDressService>();
 
             builder.Services.AddSyncfusionBlazor();
+
+            builder.Services.AddBlazorDownloadFile(ServiceLifetime.Scoped);
 
             var app = builder.Build();
 
