@@ -53,6 +53,15 @@ img {
         width: 100%;
     }
 
+.card-title {
+    font-size: 18px;
+}
+
+.card-link {
+    margin-top: 20px;
+    text-align: right;
+}
+
 @media (max-width: 1199px) {
     .masonry {
         column-count: 3;
