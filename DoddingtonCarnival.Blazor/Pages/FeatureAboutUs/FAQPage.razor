@@ -1,0 +1,154 @@
+﻿@page "/faq"
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Navigations
+@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+@using System.Globalization;
+
+@inject CalendarService calendarService
+
+<PageTitle>Carnival - Doddington Carnival</PageTitle>
+
+<title>Frequently Asked Questions</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="container">
+
+        @*         <header>
+        <h4 class="line-divider">Carnival</h4>
+        <h1>Doddington Carnival</h1>
+        </header> *@
+
+        <div class="container col-xxl-8 px-4 py-1">
+
+            <div class="row eventBanner">
+                <div class="title">
+                    Frequently Asked Questions
+                </div>
+            </div>
+
+            <div class="card eventCard">
+                <div class="card-body">
+
+                    <p class="eventHeading">When is Carnival Day?</p>
+                    <p>
+                        Doddington Village Carnival is on the morning of the first Saturday in July each year,
+                        and the parade reaches throughout the village.
+                    </p>
+
+                    <p class="eventHeading">Why do you have a Carnival Prince and Princess?</p>
+                    <p>
+                        For decades, there has been a Carnival Prince and Princess, who help to present the Carnival each year.
+                        Children can put themselves forward, and we (randomly) select a Prince and Princess, who get a luxury carriage
+                        to be driven around the village in style, and head-up the Parade Procession. More information is
+                        available on the <a href="princeandprincess">Prince and Princess page</a> of our website.
+                    </p>
+
+                    <p class="eventHeading">How does Doddington Village Sports &amp; Carnival raise money?</p>
+                    <p>
+                        We raise money by running various fundraiser events, such as Discos, the annual <a href="santarun">Santa Run</a>, <a href="pubquiz">Pub Quizzes</a> and more!
+                        Wherever we are, we carry a collection bucket with us and would always very much appreciate the donation but
+                        we're not in the habit of forcing a donation from anyone.
+                    </p>
+
+                    <p class="eventHeading">Which are the roads closed through the village, and why?</p>
+                    <p>
+                        The main road through the village will be closed from 9am to 12pm on the day of the Carnival. This is
+                        an official Highways road closure, which is enforce by law. As such, we cannot permit cars to drive through once the
+                        roads are closed, and doing so may even invalidate your insurance if anything were to happen. More information is
+                        available on the <a href="carnival/roadclosure">Road Closure page</a> of our website.
+                    </p>
+
+                    <p class="eventHeading">What are the Scarecrows for?</p>
+                    <p>
+                        It's been a long-standing tradition in the village to have a competition to see who can build the
+                        best scarecrow. It's fun to do, can be done with or without children, and it's great for everyone else to
+                        see the amazing short-lived works of art. Also, the scarecrows are built based around <a href="themes">the theme for that year</a>,
+                        so everyone is collectively working to a common thread.
+                    </p>
+
+                    <p class="eventHeading">What is a 'Santa Run'?</p>
+                    <p>
+                        In Doddington, the Santa Run is where we invite Santa Claus to join us for a 3-evening tour of the village,
+                        whereby children of all ages can come out and tell Santa what they would like for Christmas.  In early December,
+                        when the nights are dark and cold, a festive visit from Santa brings out the smiles from everyone.  More information
+                        is available on the <a href="santarun">Santa Run page</a>.
+                    </p>
+
+                    <p class="eventHeading">Where can I park in Doddington?</p>
+                    <p>
+                        First of all, if you're coming from out of the village, remember that the <a href="roadclosure">Road Closure</a> will prevent any vehicles
+                        coming into the village between 9am and 12pm on the day of the Carnival. Once you're here, you can park in and around the
+                        village itself, as long as you don't park too close to where the lorries are being prepared or need to turn around.
+                        We have lots of (free) parking on the Recreation Field on Benwick Road, which is where the Children's Sport Afternoon is held from 1pm,
+                        or you are able to park at the Doddington Hospital, also on Benwick Road.
+
+                    </p>
+
+                    <p class="eventHeading">Donations - how much goes to the Carnival?</p>
+                    <p>
+                        The short answer, is all of it. 100% of all monies raised, in whichever fundraising event that we run, goes directly to
+                        the next year's Doddington Village Sports & Carnival day. There is more information on our <a href="donations">Donations page</a>.
+                    </p>
+
+                    <p class="eventHeading">Can I help you do anything?</p>
+                    <p>
+                        Yes, we would really like that! It doesn't matter what you're able to offer, but any time you can spare us is very much appreciated.
+                        We're all volunteers too, and sharing a little work around makes a big difference. It doesn't need to be a full-on commitment and
+                        can be anything you want it to be. If you already know someone who helps out with the Carnival, give them a nudge or use the
+                        contact details below. Either way, it would be great to hear from you.
+                    </p>
+
+                    <p class="eventHeading">Where can I find out more?</p>
+                    <p>
+                        You can find out more about us in several places online, such as Facebook, Instagram, in the local Doddington Diary or you could join our email newsletter!
+                        Links to all of these are below, but if in any of these places there's something that you still can't find out, please do
+                        drop us a line and we would be happy to help.
+                    </p>
+
+                    <p>
+                        <a href="https://www.facebook.com/doddingtoncarnivalandsports" target="_blank" class="dinkyIcons"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/doddingtoncarnival" target="_blank" class="dinkyIcons"><i class="bi bi-instagram"></i></a>
+                    </p>
+                </div>
+            </div>
+
+
+
+            @*  <div class="card eventCard">
+            <div class="card-header">
+            Carnival Parade
+            </div>
+            <div class="card-body">
+            <div class="row">
+            <div class="col-lg-6 col-12">
+            <img src="images/Pages/Carnival/Titles/Float.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6 col-12">
+            <p>Float away in the parade procession through the village!</p>
+            <p>Bands, group floats, family floats and marching bands - there's something for everyone.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="/carnival/parade" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to the Parade</a>
+            </div>
+            </div>
+
+            </div>
+            </div>
+            </div> *@
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+@code {
+    DateTime? nextCarnival;
+
+    protected override async Task OnInitializedAsync()
+    {
+    }
+}
