@@ -922,6 +922,10 @@ html, body {
         font-size: 22px;
     }
 
+    .eventCard.card .subEventHeading {
+        font-size: 18px !important;
+    }
+
     .eventCard.card .eventDescription {
         text-align: justify;
     }

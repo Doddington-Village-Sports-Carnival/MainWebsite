@@ -1,0 +1,116 @@
+﻿@page "/inthenews"
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Navigations
+@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+@using System.Globalization;
+
+@inject CalendarService calendarService
+
+<PageTitle>Carnival - Doddington Carnival</PageTitle>
+
+<title>In The News</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="container">
+
+        @*         <header>
+        <h4 class="line-divider">Carnival</h4>
+        <h1>Doddington Carnival</h1>
+        </header> *@
+
+        <div class="container col-xxl-8 px-4 py-1">
+
+            <div class="row eventBanner">
+                <div class="title">
+                    In The News
+                </div>
+            </div>
+
+            <div class="card eventCard">
+                <div class="card-body">
+                    <div class="newsLink">
+                        <p class="eventHeading">Doddington Carnival and Sports: See our gallery of photos</p>
+                        <p class="subEventHeadingSmall">4th July 2023 - <a href="https://www.cambstimes.co.uk/news/23632933.doddington-carnival-sports-see-gallery-photos/" target="_blank">CambsTimes</a></p>
+                    </div>
+
+                    <div class="newsLink">
+                        <p class="eventHeading">Doddington’s popular carnival amazes the crowds</p>
+                        <p class="subEventHeadingSmall">4th July 2023 - <a href="https://www.fenlandcitizen.co.uk/news/village-s-popular-carnival-amazes-the-crowds-9319911/" target="_blank">Fenland Citizen</a></p>
+                    </div>
+                                        
+                    <div class="newsLink">
+                        <p class="eventHeading">Carnival lights up village as sports day marks 100 years</p>
+                        <p class="subEventHeadingSmall">6th July 2022 - <a href="https://www.cambstimes.co.uk/news/20686096.carnival-lights-village-sports-day-marks-100-years/" target="_blank">CambsTimes</a></p>
+                    </div>
+
+                    <div class="newsLink">
+                        <p class="eventHeading">Showers didn’t spoil the fun at Doddington Carnival and Sports Day 2019</p>
+                        <p class="subEventHeadingSmall">9th July 2019 - <a href="https://www.wisbechstandard.co.uk/news/22665028.showers-didnt-spoil-fun-doddington-carnival-sports-day-2019/" target="_blank">Wisbech Standard</a></p>
+                    </div>
+
+                    <div class="newsLink">
+                        <p class="eventHeading">Thousands enjoy throwback to the ‘80s at Doddington Carnival and Sports Day</p>
+                        <p class="subEventHeadingSmall">8th July 2016 - <a href="https://www.cambstimes.co.uk/news/22862432.thousands-enjoy-throwback-80s-doddington-carnival-sports-day/" target="_blank">CambsTimes</a></p>
+                    </div>
+                    <div class="newsLink">
+                        <p class="eventHeading">Doddington Carnival and Sports Day returns to the village on Saturday</p>
+                        <p class="subEventHeadingSmall">29th June 2016 - <a href="https://www.cambstimes.co.uk/things-to-do/22862449.doddington-carnival-sports-day-returns-village-saturday/" target="_blank">CambsTimes</a></p>
+                    </div>
+                    <div class="newsLink">
+                        <p class="eventHeading">Gallery: Carnival day in Doddington hailed a great success</p>
+                        <p class="subEventHeadingSmall">8th July 2010 - <a href="https://www.cambstimes.co.uk/news/22883702.gallery-carnival-day-doddington-hailed-great-success/" target="_blank">CambsTimes</a></p>
+                    </div>
+                    <div class="newsLink">
+                        <p class="eventHeading">Scarecrow display celebrates 75 years of Great Britain - from David Attenborough and Ed Sheeran to NHS Heroes and 1945 Land Girls</p>
+                        <p class="subEventHeadingSmall">30th June 2020 - <a href="https://www.cambstimes.co.uk/news/22851137.scarecrow-display-celebrates-75-years-great-britain---david-attenborough-ed-sheeran-nhs-heroes-1945-land-girls/" target="_blank">CambsTimes</a></p>
+                    </div>
+                    @*
+                    <div class="newsLink">
+                        <p class="eventHeading">Title</p>
+                        <p class="subEventHeadingSmall">Date - <a href="LINK" target="_blank">SOURCE</a></p>
+                    </div>
+                    *@
+
+                </div>
+            </div>
+
+
+
+            @*  <div class="card eventCard">
+            <div class="card-header">
+            Carnival Parade
+            </div>
+            <div class="card-body">
+            <div class="row">
+            <div class="col-lg-6 col-12">
+            <img src="images/Pages/Carnival/Titles/Float.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6 col-12">
+            <p>Float away in the parade procession through the village!</p>
+            <p>Bands, group floats, family floats and marching bands - there's something for everyone.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="/carnival/parade" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to the Parade</a>
+            </div>
+            </div>
+
+            </div>
+            </div>
+            </div> *@
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+@code {
+    DateTime? nextCarnival;
+
+    protected override async Task OnInitializedAsync()
+    {
+    }
+}

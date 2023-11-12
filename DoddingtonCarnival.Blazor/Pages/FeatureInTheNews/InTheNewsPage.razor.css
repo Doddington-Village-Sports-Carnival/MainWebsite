@@ -1,0 +1,14 @@
+﻿.newsLink {
+    margin-top:10px;
+    border-bottom: 5px solid #E3AF1A;
+    background-color: white;
+}
+
+.newsLink:last-child {
+    border-bottom: none;
+}
+
+    .newsLink .subEventHeadingSmall {
+        font-size: 0.9em !important;
+        margin-left: 20px;
+    }
