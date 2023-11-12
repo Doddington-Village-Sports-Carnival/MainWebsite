@@ -1,0 +1,68 @@
+﻿@page "/new"
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Navigations
+@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+@using System.Globalization;
+
+@inject CalendarService calendarService
+
+<PageTitle>Carnival - Doddington Carnival</PageTitle>
+
+<title>New To Doddington Carnival</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="container">
+
+        @*         <header>
+        <h4 class="line-divider">Carnival</h4>
+        <h1>Doddington Carnival</h1>
+        </header> *@
+
+        <div class="container col-xxl-8 px-4 py-1">
+
+            <div class="row eventBanner">
+                <div class="title">
+                    New to Doddington Carnival?
+                </div>
+            </div>
+
+            <div class="card eventCard">
+                <div class="card-body">
+
+                    <p class="eventHeading">What is Doddington Village Sports & Carnival?</p>
+                    <p>
+                        Doddington Village Carnival is an celebration of our village, which is held every year on the morning of the first Saturday in July each year.
+
+                        The tradition has dated back over a hundred years, and we're keen to keep it going.
+                    </p>
+
+                    <p class="eventHeading">Do I need to buy a ticket to view the Carnival?</p>
+                    <p>
+                        No - spectators are free, welcome and encouraged to come out and see the many floats in the <a href="carnival">Carnival</a> parade.
+                        There is a £1 entry fee (for adults only) into the <a href="sportsafternoon">Children's Sports Afternoon</a>, on Benwick Road.
+                    </p>
+                                    
+                    <p class="eventHeading">Can I attend even if I don't live in the village?</p>
+                    <p>
+                        Yes, of course! Please just remember that the <a href="carnival/roadclosure">Road Closures</a> take effect from 9am to 12pm, blocking all but emergency access to/from the village.
+                    </p>
+
+                    <p>
+                        <a href="https://www.facebook.com/doddingtoncarnivalandsports" target="_blank" class="dinkyIcons"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/doddingtoncarnival" target="_blank" class="dinkyIcons"><i class="bi bi-instagram"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    DateTime? nextCarnival;
+
+    protected override async Task OnInitializedAsync()
+    {
+    }
+}
