@@ -1,0 +1,87 @@
+﻿@page "/sponsorssupporters"
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Navigations
+@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+@using System.Globalization;
+
+@inject CalendarService calendarService
+
+<PageTitle>Carnival - Doddington Carnival</PageTitle>
+
+<title>Sponsors And Supporters</title>
+
+<div class="carnivalpage pages paralax carnivalpage-darkblue">
+    <div class="container">
+
+        @*         <header>
+        <h4 class="line-divider">Carnival</h4>
+        <h1>Doddington Carnival</h1>
+        </header> *@
+
+        <div class="container col-xxl-8 px-4 py-1">
+
+            <div class="row eventBanner">
+                <div class="title">
+                    Sponsors And Supporters
+                </div>
+            </div>
+
+            <div class="card eventCard">
+                <div class="card-body">
+
+                    <p class="eventHeading">Title Sponsor</p>
+                    <p>
+                        <div class="row">
+                            <div class="col-2">
+                                <a href="https://www.cb3consulting.co.uk/" target="_blank">
+                                    <img src="images\pages\carnival\sponsors\cb3.png" width="100%" />
+                                </a>
+                            </div>
+                            <div class="col">
+                                <DoddingtonCarnival.Blazor.Shared.Sponsors._2023_CB3 />
+                            </div>
+                        </div>
+                    </p>
+                </div>
+            </div>
+
+
+
+            @*  <div class="card eventCard">
+            <div class="card-header">
+            Carnival Parade
+            </div>
+            <div class="card-body">
+            <div class="row">
+            <div class="col-lg-6 col-12">
+            <img src="images/Pages/Carnival/Titles/Float.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6 col-12">
+            <p>Float away in the parade procession through the village!</p>
+            <p>Bands, group floats, family floats and marching bands - there's something for everyone.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a href="/carnival/parade" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to the Parade</a>
+            </div>
+            </div>
+
+            </div>
+            </div>
+            </div> *@
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+@code {
+    DateTime? nextCarnival;
+
+    protected override async Task OnInitializedAsync()
+    {
+    }
+}
