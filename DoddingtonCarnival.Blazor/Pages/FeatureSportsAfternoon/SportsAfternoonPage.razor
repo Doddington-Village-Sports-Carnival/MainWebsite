@@ -11,9 +11,9 @@
 <div class="carnivalpage pages paralax carnivalpage-darkblue">
     <div class="container">
 
-@*         <header>
-            <h4 class="line-divider">Sports Afternoon</h4>
-            <h1>Sports Afternoon</h1>
+        @*         <header>
+        <h4 class="line-divider">Sports Afternoon</h4>
+        <h1>Sports Afternoon</h1>
         </header> *@
 
         <div class="container col-xxl-8 px-4 py-1">
@@ -84,23 +84,47 @@
 
             @* <DoddingtonCarnival.Blazor.Shared.Sponsors._2023_CB3 />  *@
 
-            <SportsAfternoonComponent />
-
             @*  <SharedRaffleTickets /> *@
 
             <div class="row">
+
+                <SportsAfternoonComponent />
+
+                <div class="col-lg-6 col-12">
+                    <div class="card eventCard">
+                        <div class="card-header">
+                            Refreshments
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3 col-lg-3">
+                                    <img src="images/pages/sponsorssuppliers/wi-logo.jpg" width="100%" />
+                                </div>
+                                <div class="col">
+                                    <p>
+                                        Refreshments are kindly served by The WI.
+                                    </p>
+                                    <p>
+                                        <a class="link-dark" href="https://isle-of-ely.thewi.org.uk/find-wi/doddington" target="_blank">Learn more about The WI on their website</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-lg-6 col-12">
                     <div class="card eventCard">
                         <div class="card-header">
                             Free On-Site Parking
                         </div>
                         <div class="card-body">
-                            <p>Arriving by car to the Sports Field? We have plenty of free on-site car parking at the rear of the field.</p>
+                            <p>Arriving by car to the Sports Field?</p>
+                            <p>We have plenty of free on-site car parking at the rear of the field, as well as disabled access.</p>
                         </div>
                     </div>
                 </div>
 
-               
             </div>
 
             <DoddingtonCarnival.Blazor.Shared.Venues.RecreationalFieldComponent />
