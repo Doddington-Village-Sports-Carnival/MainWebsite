@@ -738,7 +738,6 @@
     <Folder Include="Data\2016\" />
     <Folder Include="Data\2024\" />
     <Folder Include="Properties\PublishProfiles\" />
-    <Folder Include="wwwroot\images\venues\" />
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
 

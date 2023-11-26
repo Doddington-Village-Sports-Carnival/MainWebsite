@@ -1,0 +1,7 @@
+﻿.venueImage {
+    margin-bottom: 10px;
+}
+
+.venueImage:last-child {
+    margin-bottom: 0;
+}

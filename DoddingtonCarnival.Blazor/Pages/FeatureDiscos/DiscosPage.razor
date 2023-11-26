@@ -1,79 +1,89 @@
 ﻿@page "/discos"
 
-<PageTitle>Discos - Doddington CarnivalS</PageTitle>
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Navigations
+@using DoddingtonCarnival.Blazor.Services
+@using DoddingtonCarnival.Blazor.Models
+@using System.Globalization;
+
+@inject CalendarService calendarService
+
+<PageTitle>Discos - Doddington Carnival</PageTitle>
 
 <title>Discos</title>
 
 <div class="carnivalpage pages paralax carnivalpage-darkblue">
     <div class="container">
 
-        <header>
-            <h4 class="line-divider">Discos</h4>
-            <h1>Discos</h1>
-        </header>
+@*         <header>
+            <h4 class="line-divider">Carnival</h4>
+            <h1>Doddington Carnival</h1>
+        </header> *@
 
-        <div class="container col-xxl-8 px-4 py-5">
+        <div class="container col-xxl-8 px-4 py-1">          
 
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5 text-center">
-                <p class="headerTitle">Come on down and dance your disco socks off and have a great time with family and friends! For children, it's a safe place to get your groovy on and for the older kids of yester-year, there's a fully licensed bar on-premises.</p>
+            <div class="row eventBanner">
+                <div class="title">
+                    Doddington Disco
+                </div>
+                <div class="">
+                    
+                </div>
 
-                <SharedNextEvent Tag="Disco" />
             </div>
 
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+            <div class="card eventCard">
+                <div class="card-body">
+                    <p class="eventHeading">Event Details</p>
+
+                    <p>Doddington Village Carnival is on the morning of the first Saturday in July each year, and the parade reaches throughout the village. Come out and see the fantastic array of floats, bands and vehicles on display, each to tie-in to this year's theme and show-off the creativeness of the village.</p>
+
+                    <SharedNextEvent Tag="Carnival Parade" />
+
+                    <p>
+                        <a href="https://www.facebook.com/events/328117913061794" target="_blank" class="dinkyIcons"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/doddingtoncarnival" target="_blank" class="dinkyIcons"><i class="bi bi-instagram"></i></a>
+                    </p>
                 </div>
-                <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold lh-1 mb-3">Prince and Princess Selection Disco</h1>
-                    <p class="lead">Each year, we randomly select Doddington Carnival's Prince and a Princess.</p>
-                    <p class="lead">The lucky winners are the center piece of the Carnival, opening the various events throughout the year.</p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <a href="/discos/princeandprincess" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to Prince and Princess Disco</a>
+            </div>
+ 
+
+            <div class="card eventCard">
+                <div class="card-header">
+                    Carnival Parade
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <img src="images/Pages/Carnival/Titles/Float.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <p>Float away in the parade procession through the village!</p>
+                            <p>Bands, group floats, family floats and marching bands - there's something for everyone.</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <a href="/carnival/parade" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to the Parade</a>
+                            </div>
+                        </div>
+                       
                     </div>
                 </div>
             </div>
 
-            <hr />
-
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-
-                <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold lh-1 mb-3">Doddington Disco</h1>
-                    <p class="lead">A true blast from the past! The one, the only, the original Doddington Disco!</p>
-                    <p class="lead">Leave the kids at home and join us for some 80's and 90's evenings to remember!</p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <a href="/discos/doddingtondisco" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to Doddington Disco</a>
-                    </div>
-                </div>
-
-                <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="images/Pages/Discos/DoddingtonDisco.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
-                </div>
-            </div>
-
-            <hr />
-
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="images/Pages/Discos/Trophies.png" class="d-block mx-lg-auto img-fluid" alt="" width="700" height="500" loading="lazy">
-                </div>
-                <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold lh-1 mb-3">Awards Presentation and Disco</h1>
-                    <p class="lead">Medals and trophies are awarded to the winners of the races on Sports.</p>
-                    <p class="lead">Join us for a mix of presentations and disco-fever!</p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <a href="/discos/awardspresentation" class="btn btn-primary btn-block btn-lg px-4 me-md-2">Go to Awards Presentation Disco</a>
-                    </div>
-                </div>
-            </div>
-
+            <DoddingtonCarnival.Blazor.Shared.Venues.VillageHallComponent />
         </div>
     </div>
 </div>
 
 @code {
+    DateTime? nextCarnival;
+
     protected override async Task OnInitializedAsync()
     {
+        // var nextCarnivalEvent = calendarService.GetAll("carnival-day").OrderBy(x => x.StartDateTime).FirstOrDefault();
+
+        // if (nextCarnivalEvent != null)
+        // {
+        //     nextCarnival = nextCarnivalEvent.StartDateTime;
+        // }
     }
 }
